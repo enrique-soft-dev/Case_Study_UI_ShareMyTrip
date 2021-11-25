@@ -1,0 +1,143 @@
+/* Specify the font that will be used for the whole file */
+@font-face{
+  font-family: Roboto;
+  src: url(../images/RobotoSlab.ttf);
+}
+
+/* Set of designs that will affect all the elements */
+* {
+  margin: 0;
+  font-family: Roboto;
+}
+
+body {
+  background-color: rgba(40, 245, 255, 0.1);
+}
+
+
+/* Add a design to the scrollbar. Just works on chrome*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F0F0F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #283EFF;
+}
+
+
+/*################### START HEADER ###################*/
+
+/* Specify the format of the elements inside the header */
+#header-container {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0px 7px 8px rgba(40, 245, 255, 0.2);
+}
+
+#header-container > div {
+  margin: 5px;
+}
+
+/*----- START LOGO -----*/
+
+#logo-container {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+/*Set the max size to 3/4 of real size */
+.logo {
+  max-width: 200px;
+  max-height: 79.5px;
+}
+
+
+/*----- END LOGO -----*/
+
+/*################### END HEADER ###################*/
+/*################### START FOOTER ###################*/
+
+/* Specify the format of the elements inside the footer */
+#footer_container{
+  position: absolute;
+  bottom: 0;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-shadow: 0px -7px 8px rgba(40, 245, 255, 0.2);
+  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_links {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_links ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.footer_links ul li {
+    display: flex;
+    justify-content: stretch;
+    width: 50%;
+}
+
+.footer_links ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    height: 10vh;
+    margin: 0 10%;
+    padding: 2% 15%;
+    font-size: 1.3vmax;
+}
+
+.footer_icons {
+    display: flex;
+    justify-content: flex-end;
+}
+.fa {
+    padding: 1vw;
+    font-size: 30px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5vw;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+/*################### END FOOTER ###################*/

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- Specify the language fo the webpage-->
+<html lang="en">
+
+<!--########### Head section ###########-->
+<!-- Define charset the styles path and the title of page-->
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./style/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>ShareMyTrip - Home</title>
+</head>
+
+<body>
+  <!-- ###### Section for the header ######-->
+	<!-- It contains the logo of the webpage and the title o it-->
+  <header>
+    <div id="header-container">
+      <div id="logo-container">
+				<img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+      </div>
+      <div id="navigation-container">
+				<div class="nav-buttons" id="nav-butons">
+					<div id="home">
+						<ion-icon name="home"></ion-icon>
+						<p>Home</p>
+					</div>
+					<div id="add-plan">
+						<ion-icon name="map-outline"></ion-icon>
+						<p>Add plan</p>
+					</div>
+					<div id="ranking">
+						<ion-icon name="trophy-outline"></ion-icon>
+						<p>Ranking</p>
+					</div>
+					<div class="sign-in button" id="signin-button">
+	    			<p>Sign in</p>
+					</div>
+				</div>
+      </div>
+      <div id="account-section">
+
+      </div>
+	</header>
+
+  <!-- ###### Section for the search bar ######-->
+	<!-- It contains the main filters and the search bar-->
+	<div id="search_tool">
+		<div id="filters_container">
+
+		</div>
+		<div id="search_bar">
+			<form>
+					<input type="search" placeholder="Search by place, author or interest..." id="search_text">
+					<input type="button" value="Search" id="search_button">
+			</form>
+		</div>
+	</div>
+
+  <!-- ###### Section for the grid ######-->
+	<!-- It contains the list of main experiences-->
+	<div id="experiences">
+		<div id="exp1">
+			<h5>Miyajima,Ozaki Yukiko</h5>
+			<p>200k</p>
+
+		</div>
+
+		<div id="exp2">
+			<h5>Grundarfjörður, Evert Elliðason</h5>
+			<p>78k</p>
+		</div>
+
+		<div id="exp3">
+			<h5>Sydney, Ethan Hayes</h5>
+			<p>23k</p>
+		</div>
+
+		<div id="exp4">
+			<h5>Baños, Juanita Agramonte</h5>
+			<p>55k</p>
+		</div>
+
+		<div id="exp5">
+			<h5>Bowl du prado-Marseille, Pierre Ouef</h5>
+			<p>11k</p>
+		</div>
+
+		<div id="exp6">
+			<h5>Hostaria al gladiatore - Rome, Claudio Giampa</h5>
+			<p>12k</p>
+		</div>
+
+	</div>
+
+	<!-- ###### Section for the footer ######-->
+	<!-- It contains additional information like TOS or Privacy Policy-->
+	<footer>
+		<div id="footer_container">
+			<div class="logo-container">
+            <img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+        </div>
+        <div class="footer_links">
+            <ul>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+				<div class="footer_icons">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+		</div>
+	</footer>
+
+  <!-- THis section is used to be able to put icons in the page-->
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+	<script src="https://unpkg.com/jquery/dist/jquery.js"></script>
+	<script src="https://unpkg.com/image-map/dist/image-map.jquery.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+	<script src="./scripts/script.js"></script>
+</body>
