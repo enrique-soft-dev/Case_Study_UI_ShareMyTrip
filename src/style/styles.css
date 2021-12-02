@@ -41,6 +41,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0px 7px 8px rgba(40, 245, 255, 0.2);
+  justify-content: space-between;
 }
 
 #header-container > div {
@@ -52,6 +53,7 @@ body {
 #logo-container {
   padding: 5px;
   box-sizing: border-box;
+  width: 200px;
 }
 
 /*Set the max size to 3/4 of real size */
@@ -60,10 +62,64 @@ body {
   max-height: 79.5px;
 }
 
+.nav-buttons{
+  display: flex;
+  width: 35%;
+  align-items: center;
+}
 
+.nav-buttons div span{
+  width: 100%;
+  display: flex;
+  margin: 0px 20px;
+  padding: 5px 0px;
+  border-radius: 20px;
+  justify-content: center;
+}
+.nav-buttons div span:hover{
+  background-color: #4C61FF;
+  color: #FFFFFF;
+}
+#signin-button span{
+  background-color: #4C61FF;
+  color: #FFFFFF;
+}
 /*----- END LOGO -----*/
 
 /*################### END HEADER ###################*/
+/*################### STRAT SEARCH BAR ###################*/
+
+/*################### END SEARCH BAR ###################*/
+/*################### START EXPERIENCES ###################*/
+#experiences {
+  width: 75%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 30px auto;
+  gap: 3%;
+}
+
+.exp-container {
+  width: 31.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #E0E0E0;
+  border-radius: 25px;
+  box-shadow: 5px 10px 10px #F7AD3F;
+  min-height: 500px;
+}
+
+.image-container {
+  max-width: 90%;
+  height: auto;
+}
+/*################### END EXPERIENCES ###################*/
 /*################### START FOOTER ###################*/
 
 /* Specify the format of the elements inside the footer */
