@@ -52,12 +52,14 @@
 	<!-- It contains the main filters and the search bar-->
 	<div id="search_tool">
 		<div id="filters_container">
-
+				<button>Landmarks  <ion-icon name="location-outline"></ion-icon></button>
+				<button>Food  <ion-icon name="fast-food-outline"></ion-icon></button>
+				<button>Activities  <ion-icon name="walk-outline"></ion-icon></button>
 		</div>
 		<div id="search_bar">
 			<form>
 					<input type="search" placeholder="Search by place, author or interest..." id="search_text">
-					<input type="button" value="Search" id="search_button">
+					<button><ion-icon name="search-outline"></ion-icon></button>
 			</form>
 		</div>
 	</div>
@@ -66,52 +68,59 @@
 	<!-- It contains the list of main experiences-->
 	<div id="experiences">
 		<div id="exp1" class="exp-container">
-			<div class="img_container">
-					<img src="./images/experiences/japan.jpg" alt="japan">
+			<div class="like-circle">
+				<ion-icon name="heart-outline"></ion-icon>
 			</div>
-			<h5>Miyajima,Ozaki Yukiko</h5>
-			<p>200k</p>
-
+			<img class="image-container" src="./images/experiences/japan.jpg" alt="japan">
+			<div class="text-container">
+				<h5>Miyajima,Ozaki Yukiko</h5>
+				<p>200k  <ion-icon name="heart"></ion-icon></p>
+			</div>
 		</div>
 
 		<div id="exp2" class="exp-container">
-			<div class="img_container">
-					<img src="./images/experiences/iceland.jpg" alt="iceland">
-			</div>
+				<img class="image-container" src="./images/experiences/iceland.jpg" alt="iceland">
+				<div class="like-circle">
+					<ion-icon name="heart-outline"></ion-icon>
+				</div>
 			<h5>Grundarfjörður, Evert Elliðason</h5>
-			<p>78k</p>
+			<p>78k  <ion-icon name="heart"></ion-icon></p>
 		</div>
 
 		<div id="exp3" class="exp-container">
-			<div class="img_container">
-					<img src="./images/experiences/sydney.jpg" alt="sydney">
+			<img class="image-container" src="./images/experiences/sydney.jpg" alt="sydney">
+			<div class="like-circle">
+				<ion-icon name="heart-outline"></ion-icon>
 			</div>
 			<h5>Sydney, Ethan Hayes</h5>
-			<p>23k</p>
+			<p>23k  <ion-icon name="heart"></ion-icon></p>
 		</div>
 
 		<div id="exp4" class="exp-container">
-			<div class="img_container">
-					<img src="./images/experiences/ecuador.jpg" alt="ecuador">
+			<img class="image-container" src="./images/experiences/ecuador.jpg" alt="ecuador">
+			<div class="like-circle">
+				<ion-icon name="heart-outline"></ion-icon>
 			</div>
 			<h5>Baños, Juanita Agramonte</h5>
-			<p>55k</p>
+			<p>55k  <ion-icon name="heart"></ion-icon></p>
 		</div>
 
 		<div id="exp5" class="exp-container">
-			<div class="img_container">
-					<img src="./images/experiences/marseille.jpg" alt="marseille">
+			<img class="image-container" src="./images/experiences/marseille.jpg" alt="marseille">
+			<div class="like-circle">
+				<ion-icon name="heart-outline"></ion-icon>
 			</div>
 			<h5>Bowl du prado-Marseille, Pierre Ouef</h5>
-			<p>11k</p>
+			<p>11k  <ion-icon name="heart"></ion-icon></p>
 		</div>
 
 		<div id="exp6" class="exp-container">
-			<div class="img_container">
-					<img src="./images/experiences/hostaria.jpg" alt="hostaria">
+			<div class="like-circle">
+				<ion-icon name="heart-outline"></ion-icon>
 			</div>
+			<img class="image-container" src="./images/experiences/hostaria.jpg" alt="hostaria">
 			<h5>Hostaria al gladiatore - Rome, Claudio Giampa</h5>
-			<p>12k</p>
+			<p>12k  <ion-icon name="heart"></ion-icon></p>
 		</div>
 
 	</div>
