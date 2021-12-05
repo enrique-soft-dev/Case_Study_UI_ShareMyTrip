@@ -40,9 +40,9 @@
 		</div>
 	</header>
 
-  <!-- ###### Section for the search bar ######-->
-	<!-- It contains the main filters and the search bar-->
 	<main>
+		<!-- ###### Section for the search bar ######-->
+		<!-- It contains the main filters and the search bar-->
 		<div id="search_tool">
 			<div id="filters_container">
 					<button>Landmarks  <ion-icon name="location-outline"></ion-icon></button>
@@ -128,6 +128,78 @@
 
 		</div>
 	</main>
+
+	<!-- Section fo the popups of the page. They include login, signup and experiences -->
+	<div class="popup" id="login-popup">
+		<div class="popup-window">
+			<button class="close" id="burger-close">&times;</button>
+			<div id="login-container">
+				<div class="popup-header">
+					<img class="popup-logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+					<p>SIGN IN</p>
+				</div>
+				<form id="login-content">
+					<p>Email:</p>
+					<input class="login-input" id="lemail" type="email" placeholder="Email" required>
+					<p>Password:</p>
+					<input class="login-input" id="lpassword" type="password" placeholder="Password" required>
+					<input type="submit" id="login-b" name="log in button" value="Sign in">
+				</form>
+				<div class="other-option">
+					<p>Don't have an account yet?</p>
+					<div id="change-to-signup">Sign Up</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="signup-popup">
+		<div class="popup-window">
+			<button class="close" id="burger-close">&times;</button>
+			<div id="signup-container">
+				<div class="popup-header">
+					<img class="popup-logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+					<p>SIGN UP</p>
+				</div>
+				<form id="signup-content">
+					<div id="comp-name-sur">
+						<div class="comp-ns">
+							<p>Name:</p>
+							<input class="signup-input" id="sname" type="text" placeholder="John" required>
+						</div>
+						<div class="comp-ns">
+							<p>Surname:</p>
+							<input class="signup-input" id="ssurname" type="text" placeholder="Smith Hudson" required>
+						</div>
+					</div>
+					<p>Username:</p>
+					<input class="signup-input" id="susername" type="text" placeholder="example123" required>
+					<p>Email:</p>
+					<input class="signup-input" id="semail" type="email" placeholder="example@gmail.com" required>
+					<p>Password:</p>
+					<input class="signup-input" id="spassword" type="password" placeholder="secret" required>
+					<p>Date of birth:</p>
+					<input class="signup-input" id="dob" type="date" required>
+					<p>Profile picture: (optional)</p>
+					<input class="signup-input" id="profile-img" type="file">
+					<div class="check-div">
+						<input type="checkbox" id="terms-of-service" name="tou" value="ToS">
+						<label for="terms-of-service">By continuing, you agree to the SHAREMYTRIP Terms of Service and Privacy Policy, including our cookie policy.</label><br>
+					</div>
+					<div class="check-div">
+						<input type="checkbox" id="spam" name="spam" value="spam">
+						<label for="spam">I agree to receive emails about SHAREMYTRIP products, services and local events.</label><br>
+					</div>
+					<input type="submit" id="signup-b" name="sigunup-button" value="Sign up">
+				</form>
+				<div class="other-option">
+					<p>Already have an account?</p>
+					<div id="change-to-signup">Sign In</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- ###### Section for the footer ######-->
 	<!-- It contains additional information like TOS or Privacy Policy-->
 	<footer>

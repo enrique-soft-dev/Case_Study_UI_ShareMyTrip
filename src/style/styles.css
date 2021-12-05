@@ -240,7 +240,7 @@ main{
 /*################### START POPUP ###################*/
 /* Common class for all popups. It creates the semi-opaque background*/
 .popup{
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(67, 121, 197, 0.6);
   width: 100%;
   height: 100%;
   position: fixed;
@@ -273,6 +273,130 @@ main{
   background: none;
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+/*Login popup*/
+#login-container{
+  width: 350px;
+}
+
+.popup-logo{
+  margin-top: 10px;
+  max-width: 150px;
+  max-height: 60px;
+}
+
+.popup-header p{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#login-content{
+  display: flex;
+  flex-direction: column;
+}
+
+#login-content p{
+  font-size: 18px;
+  margin: 0px auto 5px auto;
+  text-align: left;
+  width: 80%;
+}
+
+#login-content input{
+  margin: 0px auto 20px auto;
+  width: 80%;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#login-content input[type="submit"]{
+  width: 60%;
+  background-color: #4C61FF;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.other-option p{
+  margin-bottom: 10px;
+}
+
+.other-option div{
+  cursor: pointer;
+  width: 60%;
+  background-color: #4C61FF;
+  color: #FFFFFF;
+  margin: 0px auto 20px auto;
+  border-radius: 10px;
+  padding: 5px 0px;
+  font-size: 18px;
+}
+
+/*Sign up popup*/
+#signup-container{
+  width: 500px;
+  height: 700px;
+  overflow-y: scroll;
+}
+
+#signup-content{
+  display: flex;
+  flex-direction: column;
+}
+
+#comp-name-sur{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0px auto;
+}
+
+.comp-ns{
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto 15px auto;
+}
+
+#signup-content p{
+  font-size: 14px;
+  margin: 0px auto 5px auto;
+  text-align: left;
+  width: 80%;
+}
+
+#signup-content input{
+  margin: 0px auto 15px auto;
+  width: 80%;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+#signup-content input[type="submit"]{
+  width: 60%;
+  background-color: #4C61FF;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#signup-content div input{
+  margin: 0px;
+  width: auto;
+}
+
+.check-div {
+  margin: 0px auto 15px auto;
+  width: 80%;
+  text-align: left;
 }
 
 /*################### END POPUP ###################*/
