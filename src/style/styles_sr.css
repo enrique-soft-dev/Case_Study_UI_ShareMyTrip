@@ -68,3 +68,44 @@
   border-radius: 5px;
   padding: 5px;
 }
+
+/* Pop ups */
+.popup_content {
+  height: 700px;
+  width: 1100px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: flex-start;
+  align-items: stretch;
+  text-align: left;
+}
+
+.popup_info {
+  height: 50%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.popup_img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.popup_details {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.interaction_buttons {
+  display: flex;
+}
+
+.popup_desc {
+  height: 50%;
+  background-color: #D9DADB;
+  border-radius: 10px;
+  padding: 20px;
+}
