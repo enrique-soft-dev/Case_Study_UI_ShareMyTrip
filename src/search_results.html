@@ -41,55 +41,116 @@
 		</div>
 	</header>
 
-  <div id="breadcrum">
-    <p> Home > Food > Burger </p>
-  </div>
-  <!-- ###### Section for the search results ######-->
-	<!-- It shows the results from the search performed in the home page-->
-  <div id="search_results">
-    <div id="extra_filters">
-      <div id="budget">
-        <h4>Budget</h4>
-      </div>
-      <div id="order_by">
-        <h4>Order by</h4>
-        <input type="checkbox" id="order1" name="order1" value="Likes">
-				<label for="order1">Likes</label><br>
-        <input type="checkbox" id="order2" name="order2" value="Date">
-				<label for="order2">Date</label><br>
-        <input type="checkbox" id="order3" name="order3" value="Price">
-				<label for="order3">Price</label><br>
-      </div>
-      <div id="features">
-        <h4>Features</h4>
-        <input type="checkbox" id="feature1" name="feature1" value="Family">
-				<label for="feature1">Family friendly</label><br>
-        <input type="checkbox" id="feature2" name="feature2" value="Groups">
-				<label for="feature2">Good for groups</label><br>
-        <input type="checkbox" id="feature3" name="feature3" value="Booking">
-				<label for="feature3">Needs booking</label><br>
-        <input type="checkbox" id="feature4" name="feature4" value="Urban">
-				<label for="feature4">Urban</label><br>
-        <input type="checkbox" id="feature5" name="feature5" value="Nature">
-				<label for="feature5">In nature</label><br>
-      </div>
-    </div>
-    <div id="results_right">
-      <div id="head_content">
-        <h3>Showing results for "Burger"</h3>
-        <div id="asc_desc">
-          <button>Asc.</button>
-          <button>Desc.</button>
-        </div>
-      </div>
-      <div id="results_list">
-        <div id="result_experience">
-          <h5>Burger & Beyond</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-
+	<main>
+	  <div id="breadcrum">
+	    <p> Home > Food > Burger </p>
+	  </div>
+	  <!-- ###### Section for the search results ######-->
+		<!-- It shows the results from the search performed in the home page-->
+	  <div id="search_results">
+	    <div id="extra_filters">
+	      <div id="budget">
+	        <h4>Budget</h4>
+					<input type="range" min="1" max="100" value="50">
+	      </div>
+	      <div id="order_by">
+	        <h4>Order by</h4>
+	        <input type="checkbox" id="order1" name="order1" value="Likes">
+					<label for="order1">Likes</label><br>
+	        <input type="checkbox" id="order2" name="order2" value="Date">
+					<label for="order2">Date</label><br>
+	        <input type="checkbox" id="order3" name="order3" value="Price">
+					<label for="order3">Price</label><br>
+	      </div>
+	      <div id="features">
+	        <h4>Features</h4>
+	        <input type="checkbox" id="feature1" name="feature1" value="Family">
+					<label for="feature1">Family friendly</label><br>
+	        <input type="checkbox" id="feature2" name="feature2" value="Groups">
+					<label for="feature2">Good for groups</label><br>
+	        <input type="checkbox" id="feature3" name="feature3" value="Booking">
+					<label for="feature3">Needs booking</label><br>
+	        <input type="checkbox" id="feature4" name="feature4" value="Urban">
+					<label for="feature4">Urban</label><br>
+	        <input type="checkbox" id="feature5" name="feature5" value="Nature">
+					<label for="feature5">In nature</label><br>
+	      </div>
+	    </div>
+	    <div id="results_right">
+	      <div id="head_content">
+	        <h3>Showing results for "Burger"</h3>
+	        <div id="asc_desc">
+	          <button>Asc.</button>
+	          <button>Desc.</button>
+	        </div>
+	      </div>
+	      <div id="results_list">
+	        <div class="result_experience">
+						<img class="result_img" src="./images/b&b3.png" alt="burger&beyond">
+						<div class="result_info">
+	          	<p>Burger & Beyond</p>
+							<p>Liam Mackenzie</p>
+							<p>15€ - 25€ pp</p>
+							<div class="tags_row">
+								<p class="tag">#Urban</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+						</div>
+						<div class="result_desc">
+							<p>Essex-born and London-based, they’re a burger truck turned raved-about
+								restaurant in the heart of Shoreditch. To find the perfect patty, they
+								drew inspiration from burger joints all over the world, from London to
+								Miami, Vegas to LA, Berlin to NYC. So they know a good burger when
+								they bite one...</p>
+						</div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+		<!-- ###### Section for the experiences popups ######-->
+		<!-- This section contains the popups that will appear when an experience is clicked-->
+		<div class="popup" id="b&b_popup">
+			<div class="popup-window">
+				<button class="close" id="godai-close">&times;</button>
+				<div class="popup_content">
+					<div class="popup_info">
+						<img class="popup_img" src="./images/b&b.png" alt="burgers_image">
+						<div class="popup_details">
+							<p>Burger & Beyond</p>
+							<p>Location: Shoreditch, London</p>
+							<p>By Liam Mackenzie</p>
+							<p>Budget: 15€ - 25€</p>
+							<div class="tags_row">
+								<p class="tag">#Urban</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+							<p>15k likes</p>
+							<div class="interaction_buttons">
+								<ion-icon name="share-social"></ion-icon>
+								<ion-icon name="heart"></ion-icon>
+								<ion-icon name="chatbubble"></ion-icon>
+							</div>
+						</div>
+					</div>
+					<div class="popup_desc">
+						<p>They’re known for bringing some of the best burgers to the capital, using freshly ground dry aged beef made from
+							choice cuts of meat. They first gained a fanbase trading from a Citroen H van, before opening sites at street food
+							markets Kerb and Street Feast and finally launching their very own restaurant in E1. Alongside the top chef-quality
+							burgers that gave them their name, they serve American-style sides including Dirty Tots or Fries with marrow gravy,
+							plus sauces such as their signature Burnt Butter Mayo, and a drinks list of craft beers and wine.<br>
+							They work closely with Swaledale Foods, who select native breed cattle reared on local farms up in the Yorkshire Dales.
+							The cattle are reared in a totally free-range environment, feeding on hay and silage – resulting in meat that’s succulent,
+							marbled and flavour-packed. Native breeds longer to mature commercial breeds of cattle as they don’t grow as quickly, which
+							is what the meat its superior flavour.<br>
+							All of their beef is hung for between 28 and 45 days. They also use Himalayan Salt walls in their drying fridges to create the
+							perfect environment for the dry ageing process. It concentrates the flavour of the meat whilst hanging and purifies the air in
+							the room allowing ageing for a prolonged length of time without spoilage. This results in a uniquely dry, sweet and flavoursome
+							product.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
   <!-- ###### Section for the footer ######-->
   <!-- It contains additional information like TOS or Privacy Policy-->
   <footer>

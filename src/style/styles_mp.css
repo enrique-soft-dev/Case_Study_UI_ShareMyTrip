@@ -4,27 +4,60 @@
   background-color: #4C61FF;
   height: 420px;
   border-radius: 20px;
-  flex-direction: row;
-  margin-left: 5%;
+  align-items: center;
+  justify-content: center;
+  margin: 2% auto 2% auto;
+  gap: 1%;
 }
 
 .image_profile{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
-  width: 25%;
-  margin-left: 100px;
+  width: 350px;
   object-fit: cover;
-  margin-top: 2%;
-}
-
-.image_profile img{
-  border-radius: 80px;
+  align-items: center;
 }
 
 .image_profile button{
-  border-radius: 20px;
   margin-top: 1%;
+  width: 75%;
+  padding: 8px 0px;
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.image_profile button:hover{
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.square_image{
+  display: flex;
+  width: 350px;
+  height: 350px;
+  text-align: center;
+}
+
+.square_image img{
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.collection_popup{
+  display: flex;
+  width: 50%;
+  height: 50%;
 }
 
 .text_container{
@@ -34,14 +67,19 @@
   height: 90%;
   border-radius: 20px;
   width: 60%;
-  margin-left: 2%;
   justify-content: space-around;
   margin-top: 1.5%;
+}
+
+.text_container h3{
+  font-weight: bold;
 }
 
 .left_profile{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 50%;
   text-align: center;
 }
@@ -49,6 +87,8 @@
 .right_profile{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 50%;
   text-align: center;
 }
@@ -57,9 +97,9 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 8%;
+  width: 80%;
+  text-indent: 20px;
+  margin-bottom: 30px;
 }
 
 .button_container{
@@ -72,33 +112,79 @@
   flex-direction: row;
   width: 50%;
   text-align: center;
+}
 
+.button_text button{
+  width: 25%;
+  gap: 5%;
+  padding: 10px 0px;
+  font-size: 15px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+.button_text button:hover{
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+#button_collections{
+  border-bottom: 2px solid #000000;
+}
+
+#button_experiences{
+  border-bottom: 0px solid #000000;
+}
+
+#collections_display{
+  display: flex;
+  width: 100%;
+}
+
+#experiences_display{
+  display: none;
+  width: 100%;
 }
 
 #profile_collections{
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
+}
+
+#profile_experiences{
+  display: flex;
+  width: 100%;
+}
+
+#profile_collections{
+  display: flex;
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  object-fit: cover;
+  justify-content: space-around;
 }
 
 #profile_experiences{
   display: none;
   width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  object-fit: cover;
+  justify-content: space-around;
 }
 
 #profile_collections img{
   display: flex;
-  width: 30%;
-  margin-left: 1%;
-  gap:1%;
+  width: 20%;
   border-radius: 20px;
-  margin-top: 1%;
 }
 
 #profile_experiences img{
-  display: none;
-  width: 30%;
-  margin-left: 1%;
-  gap:1%;
+  display: flex;
+  width: 20%;
   border-radius: 20px;
-  margin-top: 1%;
 }

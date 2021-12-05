@@ -42,64 +42,89 @@
 	</header>
   <div class="profile-container">
     <div class="image_profile">
-      <img src="./images/luisito_profile.jpg" alt="profile_pic">
+			<div class="square_image">
+					<img src="./images/luisito_profile.jpg" alt="profile_pic">
+			</div>
 			<button>Change your profile picture</button>
     </div>
     <div class="text_container">
       	<div class="left_profile">
 					<div class="info_profile">
-						<p>Your name:</p>
+						<h3>Your name:</h3>
 						<p>Luis Márquez Ramírez</p>
 					</div>
 					<div class="info_profile">
-						<p>Username:</p>
+						<h3>Username:</h3>
 						<p>Luisito Comunica</p>
 					</div>
 					<div class="info_profile">
-						<p>Age:</p>
+						<h3>Age:</h3>
 						<p>30 Years Old</p>
 					</div>
 					<div class="info_profile">
-						<p>Birthday:</p>
+						<h3>Birthday:</h3>
 						<p>20 March</p>
 					</div>
       	</div>
 				<div class="right_profile">
 					<div class="info_profile">
-						<p>Email:</p>
+						<h3>Email:</h3>
 						<p>luisito_comunica@gmail.com</p>
 					</div>
 					<div class="info_profile">
-						<p>Instagram Account:</p>
+						<h3>Instagram Account:</h3>
 						<p>@luisito_comunica</p>
 					</div>
 					<div class="info_profile">
-						<p>Interests:</p>
-						<p>Trying new experiences around the world and <br> show it to
-							my followers. I love beautiful <br> landscapes and good food.</p>
+						<h3>Interests:</h3>
+						<p>Trying new experiences around the world and show it my followers. I love beautiful landscapes and good food.</p>
 					</div>
 				</div>
     </div>
   </div>
 
+	<div class="popup" id="add_collection_popup">
+		<button class="close">&times;</button>
+		<div class="popup-window" id="add_collection">
+			<div class="collection_popup">
+				<div class="form_collection_div">
+					<form class="collection_form">
+							<input type="text" placeholder="Name of your collection" id="collection_name">
+							<input type="file" id="collection_image">
+					</form>
+				</div>
+				<div class="show_collection">
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
 	<div class="button_container">
-		<div class="button_text">
+		<div id="button_collections" class="button_text">
 			<button>My collections</button>
 		</div>
-		<div class="button_text">
+		<div id="button_experiences" class="button_text">
 			<button>My experiences</button>
 		</div>
 	</div>
 
-	<div id="profile_collections" class="image_display">
-		<img src="./images/collection.png" alt="collection">
-		<img src="./images/experiences/marseille.jpg" alt="marseille">
-		<img src="./images/experiences/iceland.jpg" alt="iceland">
+	<div id="collections_display">
+		<div id="profile_collections">
+			<img src="./images/collection.png" alt="collection">
+			<img src="./images/experiences/marseille.jpg" alt="marseille">
+			<img src="./images/experiences/iceland.jpg" alt="iceland">
+		</div>
+	</div>
+	<div id="experiences_display">
+		<div id="profile-experiences">
+			<img src="./images/hostaria.jpg" alt="hostaria">
+			<img src="./images/experiences/sydney.jpg" alt="sydney">
+			<img src="./images/experiences/ecuador.jpg" alt="ecuador">
+		</div>
 	</div>
 
-	<div id="profile-experiences" class="image_display">
-
-	</div>
 
 
   <footer>

@@ -1,0 +1,88 @@
+
+/*General positioning*/
+#rankings {
+  width: 90%;
+  margin: 40px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*######## TOP RANKED USERS ########*/
+#top-ranked{
+  display: flex;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #4C61FF;
+  align-items: last baseline;
+  justify-content: center;
+  text-align: center;
+  gap: 5%;
+}
+
+.position{
+  font-size: 24px;
+  color: #FFFFFF;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.stats{
+  font-size: 15px;
+  color: #FFFFFF;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#img-first-rank{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#img-second-rank{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#img-third-rank{
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/*######## TOP RANKED USERS END ########*/
+
+/*######## RANK LIST USERS ########*/
+#rank-list{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.low {
+  color: #000000;
+}
+
+.pos{
+  flex-grow: 1;
+}
+
+.name{
+  flex-grow: 20;
+}
+
+.likes{
+  flex-grow: 1;
+}
+
+.low-ranks{
+  display: flex;
+  align-items: last baseline;
+  border: 1px solid #000000;
+}

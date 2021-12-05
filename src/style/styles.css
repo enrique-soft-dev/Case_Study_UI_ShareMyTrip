@@ -14,6 +14,10 @@ body {
   background-color: rgba(40, 245, 255, 0.1);
 }
 
+main{
+  min-height: calc(100vh - 100px - 95px);
+}
+
 
 /* Add a design to the scrollbar. Just works on chrome*/
 ::-webkit-scrollbar {
@@ -231,6 +235,48 @@ body {
 }
 
 /*################### END EXPERIENCES ###################*/
+
+
+/*################### START POPUP ###################*/
+/* Common class for all popups. It creates the semi-opaque background*/
+.popup{
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Actual white pop up that contains all the content of the different popups*/
+.popup-window{
+  background-color: #FFFFFF;
+  color: #000000;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+}
+
+/* Generic button to close all the popups*/
+.close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/*################### END POPUP ###################*/
+
 /*################### START FOOTER ###################*/
 
 /* Specify the format of the elements inside the footer */
