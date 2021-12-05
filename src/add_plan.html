@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Specify the language fo the webpage-->
+<html lang="en">
+
+<!--########### Head section ###########-->
+<!-- Define charset the styles path and the title of page-->
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./style/styles.css">
+  <link rel="stylesheet" href="./style/styles_ap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>ShareMyTrip - Add Plan</title>
+</head>
+
+<body>
+  <!-- ###### Section for the header ######-->
+	<!-- It contains the logo of the webpage and the title o it-->
+  <header>
+    <div id="header-container">
+      <div id="logo-container">
+				<img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+      </div>
+			<div class="nav-buttons" id="nav-butons">
+				<div id="home">
+					<ion-icon name="home-outline"></ion-icon>
+					<p>Home</p>
+				</div>
+				<div id="add-plan">
+					<ion-icon name="map"></ion-icon>
+					<p>Add plan</p>
+				</div>
+				<div id="ranking">
+					<ion-icon name="trophy-outline"></ion-icon>
+					<p>Ranking</p>
+				</div>
+				<div id="signin-button">
+					<ion-icon name="person-outline"></ion-icon>
+					<p>Sign in</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+  <div id="breadcrum">
+    <p> Home > Add plan </p>
+  </div>
+
+  <div id="page-distribution">
+    <div id="add-plan-container">
+      <div id="ap-image">
+        <ion-icon name="camera-outline"></ion-icon>
+        <p>Add a picture</p>
+      </div>
+      <div id="ap-form-info">
+        <div id="ap-budget">
+          <p>Select your budget</p>
+          <input type="text">
+          <select id="select-currency" name="currency">
+            <option value="€">€</option>
+            <option value="$">$</option>
+            <option value="£">£</option>
+            <option value="¥">¥</option>
+          </select>
+        </div>
+        <div id="ap-interests">
+          <p>Interestests</p>
+  				<input type="checkbox" id="interest1" name="interest1" value="Interest1">
+  				<label for="interest1">Interest1</label>
+  				<input type="checkbox" id="interest2" name="interest2" value="Interest2">
+  				<label for="interest2">Interest2</label>
+  				<input type="checkbox" id="interest3" name="interest3" value="Interest3">
+  				<label for="interest3">Interest3</label>
+  				<input type="checkbox" id="interest4" name="interest4" value="Interest4">
+  				<label for="interest4">Interest4</label>
+  				<input type="checkbox" id="interest5" name="interest5" value="Inerest5">
+  				<label for="interest5">Interest5</label>
+        </div>
+        <div id="ap-desc">
+          <p>What do you want to do?</p>
+          <textarea name="description" rows="4" cols="50"></textarea>
+        </div>
+        <div id="submit-b">
+          <input type="submit" name="Addplan" value="Add plan">
+        </div>
+      </div>
+    </div>
+
+    <div id="add-plan-info">
+      <h3>Add a new plan and wait for suggestions from other users</h3>
+      <p>1. Select your budget (and currency)</p>
+      <p>2. Select your interests</p>
+      <p>3. Tell us what you want and if you don't have any idea let us decide for you</p>
+    </div>
+  </div>
+
+
+  <!-- ###### Section for the footer ######-->
+	<!-- It contains additional information like TOS or Privacy Policy-->
+	<footer>
+		<div id="footer_container">
+			<div class="logo-container">
+            <img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+        </div>
+        <div class="footer_links">
+            <ul>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+				<div class="footer_icons">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+		</div>
+	</footer>
+
+  <!-- THis section is used to be able to put icons in the page-->
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+	<script src="https://unpkg.com/jquery/dist/jquery.js"></script>
+	<script src="https://unpkg.com/image-map/dist/image-map.jquery.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+	<script src="./scripts/script.js"></script>
+</body>

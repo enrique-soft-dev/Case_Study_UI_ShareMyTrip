@@ -1,0 +1,83 @@
+/*################### CHATS ###################*/
+.message-container{
+  flex-direction: row;
+  width: 100%;
+}
+
+/*################### LEFT PART ###################*/
+.people-chats {
+  flex-direction: column;
+  position: relative;
+  height: auto;
+  width: 30%;
+  display: flex;
+  margin-top: 20px;
+  background-color: #E7E7E7;
+  border-radius: 25px 25px 25px 25px;
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+.selected-chat{
+  position: relative;
+  width: 100%;
+  height: 28%;
+  display: flex;
+  background-color: #8F8C8C;
+  border: 1px solid #000000;
+  text-align: center;
+}
+
+.main-chat{
+  position: relative;
+  width: 100%;
+  height: 14%;
+  display: flex;
+  margin-bottom: 5px;
+  background-color: #79BAF7;
+  border-radius: 25px 25px 0px 0px;
+  border: 3px solid #000000;
+  text-align: center;
+}
+
+.secondary-chat{
+  position: relative;
+  width: 100%;
+  height: 14%;
+  display: flex;
+  background-color: #D6D6D6;
+  border: 1px solid #000000;
+  text-align: cenetr;
+}
+
+/*################### RIGHT PART ###################*/
+.open-chat{
+  position: relative;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  background-color: #D6D6D6;
+  border-radius: 25px;
+  border: 1px solid #000000;
+  text-align: center;
+}
+.name-bar{
+  position: relative;
+  height:14%;
+  width: 100%;
+  display: flex;
+  background-color: #4379C5;
+  border-radius: 25px 25px 0px 0px;
+  border: 1px solid #000000;
+  text-align: center;
+}
+.write-bar{
+  position: bottom;
+  height: 5%;
+  width: 100%;
+  display: flex;
+  background-color: #4379C5;
+  border-radius: 25px;
+  border: 1px solid #000000;
+  text-align: center;
+}

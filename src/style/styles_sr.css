@@ -1,0 +1,12 @@
+#search_results {
+  display: flex;
+  width: 90%;
+  padding:10px;
+  margin: 20px auto;
+  gap: 8%;
+  background-color: #FFFFFF;
+}
+
+#extra_filters {
+  background-color: #BCE0FF;
+}

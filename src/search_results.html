@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- Specify the language fo the webpage-->
+<html lang="en">
+
+<!--########### Head section ###########-->
+<!-- Define charset the styles path and the title of page-->
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./style/styles.css">
+  <link rel="stylesheet" href="./style/styles_sr.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>ShareMyTrip - Home</title>
+</head>
+
+<body>
+  <!-- ###### Section for the header ######-->
+	<!-- It contains the logo of the webpage and the title o it-->
+  <header>
+    <div id="header-container">
+      <div id="logo-container">
+				<img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+      </div>
+			<div class="nav-buttons" id="nav-butons">
+				<div id="home">
+					<ion-icon name="home"></ion-icon>
+					<p>Home</p>
+				</div>
+				<div id="add-plan">
+					<ion-icon name="map-outline"></ion-icon>
+					<p>Add plan</p>
+				</div>
+				<div id="ranking">
+					<ion-icon name="trophy-outline"></ion-icon>
+					<p>Ranking</p>
+				</div>
+				<div id="signin-button">
+					<ion-icon name="person-outline"></ion-icon>
+					<p>Sign in</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+  <div id="breadcrum">
+    <p> Home > Food > Burger </p>
+  </div>
+  <!-- ###### Section for the search results ######-->
+	<!-- It shows the results from the search performed in the home page-->
+  <div id="search_results">
+    <div id="extra_filters">
+      <div id="budget">
+        <h4>Budget</h4>
+      </div>
+      <div id="order_by">
+        <h4>Order by</h4>
+        <input type="checkbox" id="order1" name="order1" value="Likes">
+				<label for="order1">Likes</label><br>
+        <input type="checkbox" id="order2" name="order2" value="Date">
+				<label for="order2">Date</label><br>
+        <input type="checkbox" id="order3" name="order3" value="Price">
+				<label for="order3">Price</label><br>
+      </div>
+      <div id="features">
+        <h4>Features</h4>
+        <input type="checkbox" id="feature1" name="feature1" value="Family">
+				<label for="feature1">Family friendly</label><br>
+        <input type="checkbox" id="feature2" name="feature2" value="Groups">
+				<label for="feature2">Good for groups</label><br>
+        <input type="checkbox" id="feature3" name="feature3" value="Booking">
+				<label for="feature3">Needs booking</label><br>
+        <input type="checkbox" id="feature4" name="feature4" value="Urban">
+				<label for="feature4">Urban</label><br>
+        <input type="checkbox" id="feature5" name="feature5" value="Nature">
+				<label for="feature5">In nature</label><br>
+      </div>
+    </div>
+    <div id="results_right">
+      <div id="head_content">
+        <h3>Showing results for "Burger"</h3>
+        <div id="asc_desc">
+          <button>Asc.</button>
+          <button>Desc.</button>
+        </div>
+      </div>
+      <div id="results_list">
+        <div id="result_experience">
+          <h5>Burger & Beyond</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ###### Section for the footer ######-->
+  <!-- It contains additional information like TOS or Privacy Policy-->
+  <footer>
+    <div id="footer_container">
+      <div class="logo-container">
+            <img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+        </div>
+        <div class="footer_links">
+            <ul>
+                <li><a href="terms.html">Terms and Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer_icons">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+        </div>
+    </div>
+  </footer>
+
+  <!-- THis section is used to be able to put icons in the page-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+  <script src="https://unpkg.com/jquery/dist/jquery.js"></script>
+  <script src="https://unpkg.com/image-map/dist/image-map.jquery.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="./scripts/script.js"></script>
+</body>
