@@ -85,7 +85,8 @@
 
 	<div class="popup" id="add_collection_popup">
 		<div class="popup-window" id="add_collection">
-			<button class="close">&times;</button>
+			<div id="collection_container">
+				<button class="close">&times;</button>
 				<h4>Add new collection</h4>
 				<label>
 					<input type="file">
@@ -96,9 +97,11 @@
 					<input type="text" placeholder="Enter your collection name">
 					<button>Save</button>
 				</div>
+			</div>
 		</div>
 
 	</div>
+
 
 	<div class="button_container">
 		<div id="button_collections" class="button_text">
@@ -124,8 +127,59 @@
 		</div>
 	</div>
 
+	<!-- Pop up for adding an experience -->
+	<div class="popup" id="add_experience_popup">
+		<div class="popup-window" id="add_experience">
+			<button class="close" id="add_exp_close">&times;</button>
+			<div id="add_experience_container">
+				<h3>ADD A NEW EXPERIENCE</h3>
+				<form id="add_exp_form">
+					<div id="add_exp_top_section">
+						<div id="short_q_add_exp">
+							<p>Where is the experience?</p>
+							<input class="add_exp_input" id="add_exp_where" type="text" required>
+							<p>Add collaborators</p>
+							<input class="add_exp_input" id="add_exp_collab" type="text">
+						</div>
+						<div id="img_add_exp">
+							<label>
+								<input type="file" name="add-exp-img" required>
+								<img src="./images/no-image.png" alt="default">
+							</label>
+						</div>
+					</div>
+					<div id="add_exp_bottom_section">
+						<p>Description of the place</p>
+						<textarea name="description" rows="4" cols="50"></textarea>
+						<p>Categorie(s)</p>
+						<input type="checkbox" id="cat1" name="cat1" value="Landmarks">
+						<label for="cat1">Landmarks</label>
+		        <input type="checkbox" id="cat2" name="cat2" value="Food">
+						<label for="cat2">Food</label>
+		        <input type="checkbox" id="cat3" name="cat3" value="Actvities">
+						<label for="cat3">Activity</label>
+						<p>Other tags</p>
+						<input type="checkbox" id="feature1" name="feature1" value="Family">
+						<label for="feature1">Family friendly</label>
+		        <input type="checkbox" id="feature2" name="feature2" value="Groups">
+						<label for="feature2">Good for groups</label>
+		        <input type="checkbox" id="feature3" name="feature3" value="Booking">
+						<label for="feature3">Needs booking</label>
+		        <input type="checkbox" id="feature4" name="feature4" value="Urban">
+						<label for="feature4">Urban</label>
+		        <input type="checkbox" id="feature5" name="feature5" value="Nature">
+						<label for="feature5">In nature</label>
+					</div>
+					<div id="add_exp_button">
+						<input type="submit" name="add-exp" value="Add new expereience">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
-
+	<!-- ###### Section for the footer ######-->
+	<!-- It contains additional information like TOS or Privacy Policy-->
   <footer>
     <div id="footer_container">
       <div class="logo-container">

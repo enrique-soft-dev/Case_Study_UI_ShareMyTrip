@@ -1,23 +1,23 @@
 /*################### CHATS ###################*/
-.message-container{
+.messages-container{
   flex-direction: row;
+  display:flex;
   width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 /*################### LEFT PART ###################*/
 .people-chats {
   display:flex;
   flex-direction: column;
-  position: relative;
-  height: 400px;
+  height: 500px;
   width: 30%;
   display: flex;
   margin-top: 20px;
   background-color: #E7E7E7;
   border-radius: 25px 25px 25px 25px;
-  border: 0px solid #000000;
   text-align: center;
-  margin left:10px;
 }
 
 .selected-chat{
@@ -27,9 +27,9 @@
   display: flex;
   background-color: #8F8C8C;
   border: 1px solid #000000;
-  text-align: center;
   justify-content: center;
   box-sizing: border-box;
+  align-items: center;
 }
 
 .main-chat{
@@ -40,10 +40,9 @@
   margin-bottom: 5px;
   background-color: #79BAF7;
   border-radius: 25px 25px 0px 0px;
-  border: 0px solid #000000;
-  text-align: center;
   justify-content: center;
   box-sizing: border-box;
+  align-items: center;
 }
 
 .secondary-chat{
@@ -54,24 +53,25 @@
   background-color: #D6D6D6;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
-  text-align: center;
   justify-content: center;
   box-sizing: border-box;
+  align-items: center;
 }
 
 /*################### RIGHT PART ###################*/
 .open-chat{
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   float: left;
   position: relative;
-  width: 30%;
-  height:400px;
+  width: 60%;
+  height:500px;
   display: flex;
   flex-direction: column;
   background-color: #D6D6D6;
   border-radius: 25px;
-  border: 0px solid #000000;
-  text-align: center;
 }
 .name-bar{
   position: relative;
@@ -80,43 +80,45 @@
   display: flex;
   background-color: #4379C5;
   border-radius: 25px 25px 0px 0px;
-  border: 0px solid #000000;
-  text-align: center;
   justify-content: center;
   box-sizing: border-box;
+  align-items: center;
+  color: #FFFFFF;
 }
 .other-message{
+  margin: 10px;
   position: relative;
-  height:14%;
-  width: 100%;
+  height:10%;
+  width: 10%;
   display: flex;
   background-color: #8F8C8C;
   border-radius: 25px;
-  border: 0px solid #000000;
-  text-align: center;
   justify-content: center;
   box-sizing: border-box;
+  align-items: center;
 }
 .user-message{
   position: relative;
-  height:14%;
-  width: 100%;
+  height:10%;
+  width: 10%;
   display: flex;
   background-color: #79BAF7;
   border-radius: 25px;
-  border: 0px solid #000000;
-  text-align: center;
   justify-content: center;
   box-sizing: border-box;
+  float:right;
+  vertical-align: middle;
+  align-items: center;
+  left: 89%;
 }
 .write-bar{
-  top: 300px;
+  top: 55%;
   position: relative;
-  height: 5%;
+  height: 7%;
   width: 100%;
   display: flex;
   background-color: #4379C5;
   border-radius: 25px;
-  border: 0px solid #000000;
-  text-align: center;
+  align-items: center;
+  text-indent: 2px;
 }
