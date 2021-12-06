@@ -6,16 +6,18 @@
 
 /*################### LEFT PART ###################*/
 .people-chats {
+  display:flex;
   flex-direction: column;
   position: relative;
-  height: auto;
+  height: 400px;
   width: 30%;
   display: flex;
   margin-top: 20px;
   background-color: #E7E7E7;
   border-radius: 25px 25px 25px 25px;
-  border: 1px solid #000000;
+  border: 0px solid #000000;
   text-align: center;
+  margin left:10px;
 }
 
 .selected-chat{
@@ -26,6 +28,8 @@
   background-color: #8F8C8C;
   border: 1px solid #000000;
   text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .main-chat{
@@ -36,8 +40,10 @@
   margin-bottom: 5px;
   background-color: #79BAF7;
   border-radius: 25px 25px 0px 0px;
-  border: 3px solid #000000;
+  border: 0px solid #000000;
   text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .secondary-chat{
@@ -46,19 +52,25 @@
   height: 14%;
   display: flex;
   background-color: #D6D6D6;
-  border: 1px solid #000000;
-  text-align: cenetr;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 /*################### RIGHT PART ###################*/
 .open-chat{
+  display: flex;
+  float: left;
   position: relative;
-  width: 60%;
+  width: 30%;
+  height:400px;
   display: flex;
   flex-direction: column;
   background-color: #D6D6D6;
   border-radius: 25px;
-  border: 1px solid #000000;
+  border: 0px solid #000000;
   text-align: center;
 }
 .name-bar{
@@ -68,16 +80,43 @@
   display: flex;
   background-color: #4379C5;
   border-radius: 25px 25px 0px 0px;
-  border: 1px solid #000000;
+  border: 0px solid #000000;
   text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.other-message{
+  position: relative;
+  height:14%;
+  width: 100%;
+  display: flex;
+  background-color: #8F8C8C;
+  border-radius: 25px;
+  border: 0px solid #000000;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.user-message{
+  position: relative;
+  height:14%;
+  width: 100%;
+  display: flex;
+  background-color: #79BAF7;
+  border-radius: 25px;
+  border: 0px solid #000000;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .write-bar{
-  position: bottom;
+  top: 300px;
+  position: relative;
   height: 5%;
   width: 100%;
   display: flex;
   background-color: #4379C5;
   border-radius: 25px;
-  border: 1px solid #000000;
+  border: 0px solid #000000;
   text-align: center;
 }

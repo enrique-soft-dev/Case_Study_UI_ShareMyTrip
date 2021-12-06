@@ -71,8 +71,8 @@
 
 /* Pop ups */
 .popup_content {
-  height: 700px;
-  width: 1100px;
+  height: 650px;
+  width: 1000px;
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -82,7 +82,7 @@
 }
 
 .popup_info {
-  height: 50%;
+  height: 45%;
   display: flex;
   margin-bottom: 20px;
 }
@@ -93,18 +93,29 @@
 }
 
 .popup_details {
-  margin: 40px;
+  margin: 20px 0px 20px 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+}
+
+.details_title {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .interaction_buttons {
   display: flex;
+  column-gap: 3%;
+}
+
+.interaction_buttons ion-icon {
+  font-size: 30px;
 }
 
 .popup_desc {
-  height: 50%;
+  height: 45%;
+  width: 95%;
   background-color: #D9DADB;
   border-radius: 10px;
   padding: 20px;

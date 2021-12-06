@@ -234,6 +234,18 @@ main{
   align-items: center;
 }
 
+.like-circle-active{
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #F3F3F3;
+  position: absolute;
+  font-size: 18px;
+  top: 2.5%;
+  right: 2.5%;
+  display: none;
+  align-items: center;
+}
+
 /*################### END EXPERIENCES ###################*/
 
 
