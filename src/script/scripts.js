@@ -134,6 +134,7 @@ $(document).ready(function(){
   })
   $("#search_button").click(function(e){
     e.preventDefault()
+    window.scroll({top: 350, left: 0, behavior: 'smooth'});
     var value = $("#search_text").val().toLowerCase();
     //We filter by the introduced text when the button is clicked
     $("#results_list .result_experience").filter(function(){
