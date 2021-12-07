@@ -51,7 +51,13 @@ $(document).ready(function(){
     openPopUp("#exp6_popup");
   })
   $("#exp6_close").click(function(){
-    closePopUp("#exp6_popup")
+    closePopUp("#exp6_popup");
+  })
+  $("#burger_result").click(function(){
+    openPopUp("#burger_popup");
+  })
+  $("#burger_close").click(function(){
+    closePopUp("#burger_popup")
   })
   //Sign up form
   $("#signup-content").submit(function(e){
@@ -65,7 +71,7 @@ $(document).ready(function(){
     let dob = document.getElementById("dob").value;
     let path = $("#profile-img").val();
     let avatar = "images/avatars/";
-    console.log(avatar)
+
     if (!path) {
             avatar += "default.jpg";
         }
@@ -73,7 +79,7 @@ $(document).ready(function(){
             path = path.replace(/^.*\\/, "");
             avatar += path;
     }
-    console.log(avatar)
+
     let result = setCookie(email, name, surname, username, password, dob, avatar, 30);
     //Check if the user already exists and if so reset the form
     // Else show the user menu get the profile for the user and close the popup
@@ -97,7 +103,6 @@ $(document).ready(function(){
     let checked = checkCookie(lemail, lpassword);
     if (checked != "") {
       changeToUser(checked);
-      console.log("Logged");
       setLogged(1, lemail);
       getProfile(checked, lemail);
     } else {
@@ -118,6 +123,30 @@ $(document).ready(function(){
   })
   $("#user_img").click(function(){
     changePage("my_profile.html");
+  })
+  $("#search_button").click(function(e){
+    e.preventDefault()
+    showResults();
+  })
+  $("#reset_button").click(function(e){
+    e.preventDefault()
+    resetResults();
+  })
+  $("#search_button").click(function(e){
+    e.preventDefault()
+    var value = $("#search_text").val().toLowerCase();
+    //We filter by the introduced text when the button is clicked
+    $("#results_list .result_experience").filter(function(){
+      if(value != ""){
+        if (document.getElementById("landmarks_checkbox").checked || document.getElementById("food_checkbox").checked || document.getElementById("activities_checkbox").checked){
+          $(this).toggle(($(this).text().toLowerCase().indexOf(value) > -1) && ((document.getElementById("landmarks_checkbox").checked && $(this).text().indexOf("#Landmark") > -1) || (document.getElementById("food_checkbox").checked && $(this).text().indexOf("#Food") > -1) || (document.getElementById("activities_checkbox").checked && $(this).text().indexOf("#Activity") > -1)));
+        } else {
+          $(this).toggle(($(this).text().toLowerCase().indexOf(value) > -1));
+        }
+      } else {
+        $(this).toggle(((document.getElementById("landmarks_checkbox").checked && $(this).text().indexOf("#Landmark") > -1) || (document.getElementById("food_checkbox").checked && $(this).text().indexOf("#Food") > -1) || (document.getElementById("activities_checkbox").checked && $(this).text().indexOf("#Activity") > -1)));
+      }
+    })
   })
 });
 
@@ -162,6 +191,23 @@ function changePage(new_page){
   location.href = new_page;
 }
 
+function showResults(){
+  $("#experiences").hide();
+  $("#search_results").css("display","flex");
+}
+
+function applyFilter(filter){
+  $("#results_list .result_experience").filter(function(){
+    $(this).toggle($(this).text().indexOf(filter) > -1);
+  });
+}
+
+function resetResults(){
+  $("#search_results").hide();
+  $("#results_list .result_experience").show()
+  $("#experiences").show();
+}
+
 //Function to create a new cookie if it does not exists already
 function setCookie(email, name, surname, username, password, dob, avatar, exdays){
   let exists = getCookie(email);
@@ -185,7 +231,6 @@ function setLogged(logged, email){
   const d = new Date();
   d.setTime(d.getTime() + (30*24*60*60*1000));
   let expires = "expires=" + d.toGMTString();
-  console.log("Enters");
   document.cookie = "logged=" + logged + "," + email + ";" + expires + ";path=/";
 }
 

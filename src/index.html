@@ -49,14 +49,37 @@
 		<!-- ###### Section for the search bar ######-->
 		<!-- It contains the main filters and the search bar-->
 		<div id="search_tool">
-			<div id="filters_container">
-					<button>Landmarks  <ion-icon name="location-outline"></ion-icon></button>
-					<button>Food  <ion-icon name="fast-food-outline"></ion-icon></button>
-					<button>Activities  <ion-icon name="walk-outline"></ion-icon></button>
-			</div>
-			<form id="search_bar">
-					<input type="search" placeholder="Search by place, author or interest..." id="search_text">
-					<button><ion-icon name="search-outline"></ion-icon></button>
+			<form id="search_form">
+				<h2>Select a topic</h2>
+				<div id="filters_container">
+						<div class="filter" id="landmarks">
+							<input type="checkbox" id="landmarks_checkbox" value="#Landmark">
+							<div>
+								Landmarks  <ion-icon name="location-outline"></ion-icon>
+							</div>
+						</div>
+
+						<div class="filter" id="food">
+							<input type="checkbox" id="food_checkbox" value="#Food">
+							<div>
+								Food  <ion-icon name="fast-food-outline"></ion-icon>
+							</div>
+						</div>
+
+						<div class="filter" id="activities">
+							<input type="checkbox" id="activities_checkbox" value="#Activity">
+							<div>
+								Activities  <ion-icon name="walk-outline"></ion-icon>
+							</div>
+						</div>
+
+				</div>
+				<h3>- or -</h3>
+				<div id="search_bar">
+						<input type="search" placeholder="Search by place or author..." id="search_text">
+						<button id="search_button"><ion-icon name="search-outline"></ion-icon></button>
+						<button id="reset_button"><ion-icon name="trash-outline"></ion-icon></button>
+				</div>
 			</form>
 		</div>
 
@@ -147,6 +170,173 @@
 				</div>
 			</div>
 		</div>
+		<!-- ###### Section for the search results ######-->
+		<!-- It shows the results from the search performed in the home page-->
+	  <div id="search_results">
+	    <div id="extra_filters">
+	      <div id="budget">
+	        <h4>Budget</h4>
+					<input type="range" min="1" max="100" value="50">
+	      </div>
+	      <div id="order_by">
+	        <h4>Order by</h4>
+	        <input type="checkbox" id="order1" name="order1" value="Likes">
+					<label for="order1">Likes</label><br>
+	        <input type="checkbox" id="order2" name="order2" value="Date">
+					<label for="order2">Date</label><br>
+	        <input type="checkbox" id="order3" name="order3" value="Price">
+					<label for="order3">Price</label><br>
+	      </div>
+	      <div id="features">
+	        <h4>Features</h4>
+	        <input type="checkbox" id="feature1" name="feature1" value="Family">
+					<label for="feature1">Family friendly</label><br>
+	        <input type="checkbox" id="feature2" name="feature2" value="Groups">
+					<label for="feature2">Good for groups</label><br>
+	        <input type="checkbox" id="feature3" name="feature3" value="Booking">
+					<label for="feature3">Needs booking</label><br>
+	        <input type="checkbox" id="feature4" name="feature4" value="Urban">
+					<label for="feature4">Urban</label><br>
+	        <input type="checkbox" id="feature5" name="feature5" value="Nature">
+					<label for="feature5">In nature</label><br>
+	      </div>
+	    </div>
+	    <div id="results_right">
+	      <div id="head_content">
+	        <h3>Showing results for "Burger"</h3>
+	        <div id="asc_desc">
+	          <button>Asc.</button>
+	          <button>Desc.</button>
+	        </div>
+	      </div>
+	      <div id="results_list">
+	        <div class="result_experience" id="burger_result">
+						<img class="result_img" src="./images/b&b3.png" alt="burger&beyond">
+						<div class="result_info">
+	          	<p>Burger & Beyond</p>
+							<p>Liam Mackenzie</p>
+							<p>15€ - 25€ pp</p>
+							<div class="tags_row">
+								<p class="tag principal">#Food</p>
+								<p class="tag">#Urban</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+						</div>
+						<div class="result_desc">
+							<p>Essex-born and London-based, they’re a burger truck turned raved-about
+								restaurant in the heart of Shoreditch. To find the perfect patty, they
+								drew inspiration from burger joints all over the world, from London to
+								Miami, Vegas to LA, Berlin to NYC. So they know a good burger when
+								they bite one...</p>
+						</div>
+	        </div>
+					<div class="result_experience" id="exp1_result">
+						<img class="result_img" src="./images/experiences/japan.jpg" alt="exp1_img">
+						<div class="result_info">
+	          	<p>Door of Miyajima</p>
+							<p>Ozaki Yukiko</p>
+							<p>5$ pp</p>
+							<div class="tags_row">
+								<p class="tag principal">#Landmark</p>
+								<p class="tag">#In Nature</p>
+							</div>
+						</div>
+						<div class="result_desc">
+							<p>The Itsukushima Shrine is the "house" of the famous floating toring.
+								It's a temple by the sea and it is affected by the low and high tide...</p>
+						</div>
+	        </div>
+					<div class="result_experience" id="exp2_result">
+						<img class="result_img" src="./images/experiences/iceland.jpg" alt="exp2_img">
+						<div class="result_info">
+		 					<p>Grundarfjörður</p>
+		 					<p>Evert Elliðason</p>
+		 					<p>Free</p>
+		 					<div class="tags_row">
+								<p class="tag principal">#Landmark</p>
+								<p class="tag principal">#Activity</p>
+		  					<p class="tag">#In Nature</p>
+		  					<p class="tag">#Good for groups</p>
+		 					</div>
+						</div>
+						<div class="result_desc">
+						 <p>During my recent tour of Iceland, I stayed one night at the Grundarfjordur Campground.
+						 The campground was clean and well maintained...</p>
+					 	</div>
+					</div>
+					<div class="result_experience" id="exp3_result">
+						<img class="result_img" src="./images/experiences/sydney.jpg" alt="exp3_img">
+						<div class="result_info">
+	          	<p>Sydney Opera</p>
+							<p>Ethan Hayes</p>
+							<p>45+$</p>
+							<div class="tags_row">
+								<p class="tag principal">#Activity</p>
+								<p class="tag">#Urban</p>
+								<p class="tag">#Good for groups</p>
+								<p class="tag">#Needs booking</p>
+							</div>
+						</div>
+						<div class="result_desc">
+							<p>This is THE iconic building of Sydney. It's a place that shouldn't be
+								missed, even if you don't see any show inside...</p>
+						</div>
+	        </div>
+					<div class="result_experience" id="exp4_result">
+						<img class="result_img" src="./images/experiences/ecuador.jpg" alt="exp4_img">
+						<div class="result_info">
+	          	<p>Baños de Agua Santa</p>
+							<p>Juanita Agramonte</p>
+							<p>Free</p>
+							<div class="tags_row">
+								<p class="tag principal">#Landmark</p>
+								<p class="tag">#In Nature</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+						</div>
+						<div class="result_desc">
+							<p>Baños de Agua Santa is located in Tungurahua Province and it is
+								found to 45 minutes of Ambato city...</p>
+						</div>
+	        </div>
+					<div class="result_experience" id="exp5_result">
+						<img class="result_img" src="./images/experiences/marseille.jpg" alt="exp5_img">
+						<div class="result_info">
+	          	<p>Le Vieux Port</p>
+							<p>Claudio Giampa</p>
+							<p>20-70$ pp</p>
+							<div class="tags_row">
+								<p class="tag principal">#Landmark</p>
+								<p class="tag">#Urban</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+						</div>
+						<div class="result_desc">
+							<p>The port is beautiful, the heart of Marseille. In the hot summer, the port comes alive in the evening.
+								Full of people and families going out to eat and drink...</p>
+						</div>
+	        </div>
+					<div class="result_experience" id="exp6_result">
+						<img class="result_img" src="./images/experiences/hostaria.jpg" alt="exp6_img">
+						<div class="result_info">
+	          	<p>Hostaria al gladiatore</p>
+							<p>Pierre Ouef</p>
+							<p>20-40$</p>
+							<div class="tags_row">
+								<p class="tag principal">#Food</p>
+								<p class="tag">#Family Friendly</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+						</div>
+						<div class="result_desc">
+							<p>This restaurant sits opposite the Colosseum and it truly is a spectacular
+								sight for you to feast your eyes upon when you’re not feasting on their
+								delicious pasta!</p>
+						</div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 	</main>
 
 	<!-- Section fo the popups of the page. They include login, signup and experiences -->
@@ -224,26 +414,27 @@
 	<div class="popup" id="exp1_popup">
 		<div class="popup-window">
 			<button class="close" id="exp1_close">&times;</button>
-			<div class="popup_content_main">
-				<div class="popup_info_main">
-					<img class="popup_img_main" src="./images/experiences/japan.jpg" alt="japan_image">
-					<div class="popup_details_main">
-						<p class="details_title_main">Door of Miyajima</p>
+			<div class="popup_content">
+				<div class="popup_info">
+					<img class="popup_img" src="./images/experiences/japan.jpg" alt="japan_image">
+					<div class="popup_details">
+						<p class="details_title">Door of Miyajima</p>
 						<p>Location: Miyajima, Japan</p>
 						<p>By Ozaki Yukiko</p>
 						<p>Budget: 5$</p>
-						<div class="tags_row_main">
-							<p class="tag_main">#In Nature</p>
+						<div class="tags_row">
+							<p class="tag principal">#Landmark</p>
+							<p class="tag">#In Nature</p>
 						</div>
 						<p>200k likes</p>
-						<div class="interaction_buttons_main">
+						<div class="interaction_buttons">
 							<ion-icon name="share-social"></ion-icon>
 							<ion-icon name="heart"></ion-icon>
 							<ion-icon name="chatbubble"></ion-icon>
 						</div>
 					</div>
 				</div>
-				<div class="popup_desc_main">
+				<div class="popup_desc">
 					<p>The Itsukushima Shrine is the "house" of the famous floating toring.
 						It's a temple by the sea and it is affected by the low and high tide.
 						It's nice, cute, very red... and with quite a few tourists.
@@ -255,27 +446,29 @@
 	<div class="popup" id="exp2_popup">
 		<div class="popup-window">
 			<button class="close" id="exp2_close">&times;</button>
-			<div class="popup_content_main">
-				<div class="popup_info_main">
-					<img class="popup_img_main" src="./images/experiences/iceland.jpg" alt="iceland_image">
-					<div class="popup_details_main">
-						<p class="details_title_main">Grundarfjörður</p>
+			<div class="popup_content">
+				<div class="popup_info">
+					<img class="popup_img" src="./images/experiences/iceland.jpg" alt="iceland_image">
+					<div class="popup_details">
+						<p class="details_title">Grundarfjörður</p>
 						<p>Location: Grundarfjörður, Iceland</p>
 						<p>By Evert Elliðason</p>
 						<p>Budget: Free</p>
-						<div class="tags_row_main">
-							<p class="tag_main">#In Nature</p>
-							<p class="tag_main">#Good for groups</p>
+						<div class="tags_row">
+							<p class="tag principal">#Landmark</p>
+							<p class="tag principal">#Activity</p>
+							<p class="tag">#In Nature</p>
+							<p class="tag">#Good for groups</p>
 						</div>
 						<p>78k likes</p>
-						<div class="interaction_buttons_main">
+						<div class="interaction_buttons">
 							<ion-icon name="share-social"></ion-icon>
 							<ion-icon name="heart"></ion-icon>
 							<ion-icon name="chatbubble"></ion-icon>
 						</div>
 					</div>
 				</div>
-				<div class="popup_desc_main">
+				<div class="popup_desc">
 					<p>During my recent tour of Iceland, I stayed one night at the Grundarfjordur Campground.
 						The campground was clean and well maintained. The location was ideal, as the town had a
 						nice grocery store to stock up on supplies. There is a large swimming pool complex nearby.
@@ -288,28 +481,29 @@
 	<div class="popup" id="exp3_popup">
 		<div class="popup-window">
 			<button class="close" id="exp3_close">&times;</button>
-			<div class="popup_content_main">
-				<div class="popup_info_main">
-					<img class="popup_img_main" src="./images/experiences/sydney.jpg" alt="sidney_image">
-					<div class="popup_details_main">
-						<p class="details_title_main">Sydney Opera</p>
+			<div class="popup_content">
+				<div class="popup_info">
+					<img class="popup_img" src="./images/experiences/sydney.jpg" alt="sidney_image">
+					<div class="popup_details">
+						<p class="details_title">Sydney Opera</p>
 						<p>Location: Sydney, Australia</p>
 						<p>By Ethan Hayes</p>
 						<p>Budget: 45+$</p>
-						<div class="tags_row_main">
-							<p class="tag_main">#Urban</p>
-							<p class="tag_main">#Good for groups</p>
-							<p class="tag_main">#Needs booking</p>
+						<div class="tags_row">
+							<p class="tag principal">#Activity</p>
+							<p class="tag">#Urban</p>
+							<p class="tag">#Good for groups</p>
+							<p class="tag">#Needs booking</p>
 						</div>
 						<p>23k likes</p>
-						<div class="interaction_buttons_main">
+						<div class="interaction_buttons">
 							<ion-icon name="share-social"></ion-icon>
 							<ion-icon name="heart"></ion-icon>
 							<ion-icon name="chatbubble"></ion-icon>
 						</div>
 					</div>
 				</div>
-				<div class="popup_desc_main">
+				<div class="popup_desc">
 					<p>This is THE iconic building of Sydney.
 						It's a landmark that shouldn't be missed, even if you don't see any show inside.
 						Just see the beautiful architecture from outside.
@@ -327,27 +521,28 @@
 	<div class="popup" id="exp4_popup">
 		<div class="popup-window">
 			<button class="close" id="exp4_close">&times;</button>
-			<div class="popup_content_main">
-				<div class="popup_info_main">
-					<img class="popup_img_main" src="./images/experiences/ecuador.jpg" alt="ecuador_image">
-					<div class="popup_details_main">
-						<p class="details_title_main">Baños de Agua Santa</p>
+			<div class="popup_content">
+				<div class="popup_info">
+					<img class="popup_img" src="./images/experiences/ecuador.jpg" alt="ecuador_image">
+					<div class="popup_details">
+						<p class="details_title">Baños de Agua Santa</p>
 						<p>Location: Baños, Ecuador</p>
 						<p>By Juanita Agramonte</p>
 						<p>Budget: Free</p>
-						<div class="tags_row_main">
-							<p class="tag_main">#In Nature</p>
-							<p class="tag_main">#Good for groups</p>
+						<div class="tags_row">
+							<p class="tag principal">#Landmark</p>
+							<p class="tag">#In Nature</p>
+							<p class="tag">#Good for groups</p>
 						</div>
 						<p>55k likes</p>
-						<div class="interaction_buttons_main">
+						<div class="interaction_buttons">
 							<ion-icon name="share-social"></ion-icon>
 							<ion-icon name="heart"></ion-icon>
 							<ion-icon name="chatbubble"></ion-icon>
 						</div>
 					</div>
 				</div>
-				<div class="popup_desc_main">
+				<div class="popup_desc">
 					<p>Baños de Agua Santa is located in Tungurahua Province and it is found to 45 minutes of Ambato city,
 						this place has a nice weather, also it is one of places most visited for foreigners and citizens of
 						the same country. In Baños de Agua Santa offer its tourists extreme sports such as rafting, climbing,
@@ -361,27 +556,28 @@
 	<div class="popup" id="exp5_popup">
 		<div class="popup-window">
 			<button class="close" id="exp5_close">&times;</button>
-			<div class="popup_content_main">
-				<div class="popup_info_main">
-					<img class="popup_img_main" src="./images/experiences/marseille.jpg" alt="marseille_image">
-					<div class="popup_details_main">
-						<p class="details_title_main">Le Vieux Port</p>
+			<div class="popup_content">
+				<div class="popup_info">
+					<img class="popup_img" src="./images/experiences/marseille.jpg" alt="marseille_image">
+					<div class="popup_details">
+						<p class="details_title">Le Vieux Port</p>
 						<p>Location: Marseille, France</p>
 						<p>By Claudio Giampa</p>
 						<p>Budget: 20-70$</p>
-						<div class="tags_row_main">
-							<p class="tag_main">#Urban</p>
-							<p class="tag_main">#Good for groups</p>
+						<div class="tags_row">
+							<p class="tag principal">#Landmark</p>
+							<p class="tag">#Urban</p>
+							<p class="tag">#Good for groups</p>
 						</div>
 						<p>11k likes</p>
-						<div class="interaction_buttons_main">
+						<div class="interaction_buttons">
 							<ion-icon name="share-social"></ion-icon>
 							<ion-icon name="heart"></ion-icon>
 							<ion-icon name="chatbubble"></ion-icon>
 						</div>
 					</div>
 				</div>
-				<div class="popup_desc_main">
+				<div class="popup_desc">
 					<p>The port is beautiful, the heart of Marseille. In the hot summer, the port comes alive in the evening.
 						Full of people and families going out to eat and drink, watch street musicians. Really lively and fun
 						atmosphere. And beautiful large squares on the south side of the port, just go a little inside the streets
@@ -390,31 +586,73 @@
 			</div>
 		</div>
 	</div>
-
-	<div class="popup" id="exp6_popup">
+	<div class="popup" id="burger_popup">
 		<div class="popup-window">
-			<button class="close" id="exp6_close">&times;</button>
-			<div class="popup_content_main">
-				<div class="popup_info_main">
-					<img class="popup_img_main" src="./images/experiences/hostaria.jpg" alt="hostaria_image">
-					<div class="popup_details_main">
-						<p class="details_title_main">Hostaria al gladiatore</p>
-						<p>Location: Rome, Italy</p>
-						<p>By Pierre Ouef</p>
-						<p>Budget: 20-40$</p>
-						<div class="tags_row_main">
-							<p class="tag_main">#Family Friendly</p>
-							<p class="tag_main">#Good for groups</p>
+			<button class="close" id="burger_close">&times;</button>
+			<div class="popup_content">
+				<div class="popup_info">
+					<img class="popup_img" src="./images/b&b.png" alt="burgers_image">
+					<div class="popup_details">
+						<p class="details_title">Burger & Beyond</p>
+						<p>Location: Shoreditch, London</p>
+						<p>By Liam Mackenzie</p>
+						<p>Budget: 15€ - 25€</p>
+						<div class="tags_row">
+							<p class="tag principal">#Food</p>
+							<p class="tag">#Urban</p>
+							<p class="tag">#Good for groups</p>
 						</div>
-						<p>12k likes</p>
-						<div class="interaction_buttons_main">
+						<p>15k likes</p>
+						<div class="interaction_buttons">
 							<ion-icon name="share-social"></ion-icon>
 							<ion-icon name="heart"></ion-icon>
 							<ion-icon name="chatbubble"></ion-icon>
 						</div>
 					</div>
 				</div>
-				<div class="popup_desc_main">
+				<div class="popup_desc">
+					<p>They’re known for bringing some of the best burgers to the capital, using freshly ground dry aged beef made from
+						choice cuts of meat. They first gained a fanbase trading from a Citroen H van, before opening sites at street food
+						markets Kerb and Street Feast and finally launching their very own restaurant in E1. Alongside the top chef-quality
+						burgers that gave them their name, they serve American-style sides including Dirty Tots or Fries with marrow gravy,
+						plus sauces such as their signature Burnt Butter Mayo, and a drinks list of craft beers and wine.<br><br>
+						They work closely with Swaledale Foods, who select native breed cattle reared on local farms up in the Yorkshire Dales.
+						The cattle are reared in a totally free-range environment, feeding on hay and silage – resulting in meat that’s succulent,
+						marbled and flavour-packed.<br><br>
+						All of their beef is hung for between 28 and 45 days. They also use Himalayan Salt walls in their drying fridges to create the
+						perfect environment for the dry ageing process. It concentrates the flavour of the meat whilst hanging and purifies the air in
+						the room allowing ageing for a prolonged length of time without spoilage. This results in a uniquely dry, sweet and flavoursome
+						product.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="exp6_popup">
+		<div class="popup-window">
+			<button class="close" id="exp6_close">&times;</button>
+			<div class="popup_content">
+				<div class="popup_info">
+					<img class="popup_img" src="./images/experiences/hostaria.jpg" alt="hostaria_image">
+					<div class="popup_details">
+						<p class="details_title">Hostaria al gladiatore</p>
+						<p>Location: Rome, Italy</p>
+						<p>By Pierre Ouef</p>
+						<p>Budget: 20-40$</p>
+						<div class="tags_row">
+							<p class="tag principal">#Food</p>
+							<p class="tag">#Family Friendly</p>
+							<p class="tag">#Good for groups</p>
+						</div>
+						<p>12k likes</p>
+						<div class="interaction_buttons">
+							<ion-icon name="share-social"></ion-icon>
+							<ion-icon name="heart"></ion-icon>
+							<ion-icon name="chatbubble"></ion-icon>
+						</div>
+					</div>
+				</div>
+				<div class="popup_desc">
 					<p>This restaurant sits opposite the Colosseum and it truly is a spectacular sight for
 						you to feast your eyes upon when you’re not feasting on their delicious pasta!
 						We took the set menu which contained a glass of wine, bruschetta, and a pasta dish for €15.
