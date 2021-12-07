@@ -12,30 +12,35 @@
 </head>
 
 <body>
-  <!-- ###### Section for the header ######-->
+	<!-- ###### Section for the header ######-->
 	<!-- It contains the logo of the webpage and the title o it-->
-  <header>
-    <div id="header-container">
-      <div id="logo-container">
-				<img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
-      </div>
-			<div class="nav-buttons" id="nav-butons">
-				<div id="home">
-					<ion-icon name="home"></ion-icon>
-					<p>Home</p>
-				</div>
-				<div id="add-plan">
-					<ion-icon name="map-outline"></ion-icon>
-					<p>Add plan</p>
-				</div>
-				<div id="ranking">
-					<ion-icon name="trophy-outline"></ion-icon>
-					<p>Ranking</p>
-				</div>
-				<div id="signin-button">
-					<ion-icon name="person-outline"></ion-icon>
-					<p>Sign in</p>
-				</div>
+	<header id="header_container">
+		<div id="logo_container">
+			<img id="header_logo" src="./images/SHAREMYTRIP_free-file.png" alt="sharemytrip logo">
+		</div>
+		<div id="menu_full_page">
+			<div class="menu_option" id="home">
+				<ion-icon name="home"></ion-icon>
+				<p>Home</p>
+			</div>
+			<div class="menu_option" id="add_plan">
+				<ion-icon name="map-outline"></ion-icon>
+				<p>Add plan</p>
+			</div>
+			<div class="menu_option" id="ranking">
+				<ion-icon name="trophy-outline"></ion-icon>
+				<p>Rankings</p>
+			</div>
+		</div>
+		<div id="user_part">
+			<div id="signin_button">
+				<ion-icon name="person-outline"></ion-icon>
+				<p>Sign in</p>
+			</div>
+			<div id="user_logged">
+				<img id="user_img" src="./images/luisito_profile.jpg" alt="profile picture">
+				<p id="user_username">@User1</p>
+				<ion-icon id="messages_icon" name="paper-plane-outline"></ion-icon>
 			</div>
 		</div>
 	</header>
@@ -49,12 +54,10 @@
 					<button>Food  <ion-icon name="fast-food-outline"></ion-icon></button>
 					<button>Activities  <ion-icon name="walk-outline"></ion-icon></button>
 			</div>
-			<div id="search_bar">
-				<form>
-						<input type="search" placeholder="Search by place, author or interest..." id="search_text">
-						<button><ion-icon name="search-outline"></ion-icon></button>
-				</form>
-			</div>
+			<form id="search_bar">
+					<input type="search" placeholder="Search by place, author or interest..." id="search_text">
+					<button><ion-icon name="search-outline"></ion-icon></button>
+			</form>
 		</div>
 
 	  <!-- ###### Section for the grid ######-->
@@ -143,7 +146,6 @@
 					<p>12k  <ion-icon name="heart"></ion-icon></p>
 				</div>
 			</div>
-
 		</div>
 	</main>
 
@@ -173,7 +175,7 @@
 
 	<div class="popup" id="signup-popup">
 		<div class="popup-window">
-			<button class="close" id="burger-close">&times;</button>
+			<button class="close" id="signup-close">&times;</button>
 			<div id="signup-container">
 				<div class="popup-header">
 					<img class="popup-logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
@@ -201,7 +203,7 @@
 					<p>Profile picture: (optional)</p>
 					<input class="signup-input" id="profile-img" type="file">
 					<div class="check-div">
-						<input type="checkbox" id="terms-of-service" name="tou" value="ToS">
+						<input type="checkbox" id="terms-of-service" name="tou" value="ToS" required>
 						<label for="terms-of-service">By continuing, you agree to the SHAREMYTRIP Terms of Service and Privacy Policy, including our cookie policy.</label><br>
 					</div>
 					<div class="check-div">
@@ -218,12 +220,216 @@
 		</div>
 	</div>
 
+	<!-- Section fo the popups of the experiences. -->
+	<div class="popup" id="exp1_popup">
+		<div class="popup-window">
+			<button class="close" id="exp1_close">&times;</button>
+			<div class="popup_content_main">
+				<div class="popup_info_main">
+					<img class="popup_img_main" src="./images/experiences/japan.jpg" alt="japan_image">
+					<div class="popup_details_main">
+						<p class="details_title_main">Door of Miyajima</p>
+						<p>Location: Miyajima, Japan</p>
+						<p>By Ozaki Yukiko</p>
+						<p>Budget: 5$</p>
+						<div class="tags_row_main">
+							<p class="tag_main">#In Nature</p>
+						</div>
+						<p>200k likes</p>
+						<div class="interaction_buttons_main">
+							<ion-icon name="share-social"></ion-icon>
+							<ion-icon name="heart"></ion-icon>
+							<ion-icon name="chatbubble"></ion-icon>
+						</div>
+					</div>
+				</div>
+				<div class="popup_desc_main">
+					<p>The Itsukushima Shrine is the "house" of the famous floating toring.
+						It's a temple by the sea and it is affected by the low and high tide.
+						It's nice, cute, very red... and with quite a few tourists.
+						There's an entrance fee to the Shrine (unlike Torii, which you can enjoy for free).</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="exp2_popup">
+		<div class="popup-window">
+			<button class="close" id="exp2_close">&times;</button>
+			<div class="popup_content_main">
+				<div class="popup_info_main">
+					<img class="popup_img_main" src="./images/experiences/iceland.jpg" alt="iceland_image">
+					<div class="popup_details_main">
+						<p class="details_title_main">Grundarfjörður</p>
+						<p>Location: Grundarfjörður, Iceland</p>
+						<p>By Evert Elliðason</p>
+						<p>Budget: Free</p>
+						<div class="tags_row_main">
+							<p class="tag_main">#In Nature</p>
+							<p class="tag_main">#Good for groups</p>
+						</div>
+						<p>78k likes</p>
+						<div class="interaction_buttons_main">
+							<ion-icon name="share-social"></ion-icon>
+							<ion-icon name="heart"></ion-icon>
+							<ion-icon name="chatbubble"></ion-icon>
+						</div>
+					</div>
+				</div>
+				<div class="popup_desc_main">
+					<p>During my recent tour of Iceland, I stayed one night at the Grundarfjordur Campground.
+						The campground was clean and well maintained. The location was ideal, as the town had a
+						nice grocery store to stock up on supplies. There is a large swimming pool complex nearby.
+						Kirkjufell Mountain is within a five minute drive and I recommend exploring other areas along
+						the peninsula.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="exp3_popup">
+		<div class="popup-window">
+			<button class="close" id="exp3_close">&times;</button>
+			<div class="popup_content_main">
+				<div class="popup_info_main">
+					<img class="popup_img_main" src="./images/experiences/sydney.jpg" alt="sidney_image">
+					<div class="popup_details_main">
+						<p class="details_title_main">Sydney Opera</p>
+						<p>Location: Sydney, Australia</p>
+						<p>By Ethan Hayes</p>
+						<p>Budget: 45+$</p>
+						<div class="tags_row_main">
+							<p class="tag_main">#Urban</p>
+							<p class="tag_main">#Good for groups</p>
+							<p class="tag_main">#Needs booking</p>
+						</div>
+						<p>23k likes</p>
+						<div class="interaction_buttons_main">
+							<ion-icon name="share-social"></ion-icon>
+							<ion-icon name="heart"></ion-icon>
+							<ion-icon name="chatbubble"></ion-icon>
+						</div>
+					</div>
+				</div>
+				<div class="popup_desc_main">
+					<p>This is THE iconic building of Sydney.
+						It's a landmark that shouldn't be missed, even if you don't see any show inside.
+						Just see the beautiful architecture from outside.
+						We first took a ferry ride & admired the Opera House from afar & then
+						walked right up to it the next day.
+						The history of the House is quite interesting & even if you don't find it out there,
+						do look it up online. We went to a basement sort of area where a
+						beautiful artificial tree had been put up. Tourists are always thronging the place.
+						So be aware of crowds.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="exp4_popup">
+		<div class="popup-window">
+			<button class="close" id="exp4_close">&times;</button>
+			<div class="popup_content_main">
+				<div class="popup_info_main">
+					<img class="popup_img_main" src="./images/experiences/ecuador.jpg" alt="ecuador_image">
+					<div class="popup_details_main">
+						<p class="details_title_main">Baños de Agua Santa</p>
+						<p>Location: Baños, Ecuador</p>
+						<p>By Juanita Agramonte</p>
+						<p>Budget: Free</p>
+						<div class="tags_row_main">
+							<p class="tag_main">#In Nature</p>
+							<p class="tag_main">#Good for groups</p>
+						</div>
+						<p>55k likes</p>
+						<div class="interaction_buttons_main">
+							<ion-icon name="share-social"></ion-icon>
+							<ion-icon name="heart"></ion-icon>
+							<ion-icon name="chatbubble"></ion-icon>
+						</div>
+					</div>
+				</div>
+				<div class="popup_desc_main">
+					<p>Baños de Agua Santa is located in Tungurahua Province and it is found to 45 minutes of Ambato city,
+						this place has a nice weather, also it is one of places most visited for foreigners and citizens of
+						the same country. In Baños de Agua Santa offer its tourists extreme sports such as rafting, climbing,
+						canyoning, swing jump, mountain biking and so on. In addition, the visitors can find a lot of hostels
+						with prices moderate or expensive, a lot of restaurants with local dishes, international gastronomy,
+						but also tourists can eat local dishes or drink delicious fruits smoothies at popular market local.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup" id="exp5_popup">
+		<div class="popup-window">
+			<button class="close" id="exp5_close">&times;</button>
+			<div class="popup_content_main">
+				<div class="popup_info_main">
+					<img class="popup_img_main" src="./images/experiences/marseille.jpg" alt="marseille_image">
+					<div class="popup_details_main">
+						<p class="details_title_main">Le Vieux Port</p>
+						<p>Location: Marseille, France</p>
+						<p>By Claudio Giampa</p>
+						<p>Budget: 20-70$</p>
+						<div class="tags_row_main">
+							<p class="tag_main">#Urban</p>
+							<p class="tag_main">#Good for groups</p>
+						</div>
+						<p>11k likes</p>
+						<div class="interaction_buttons_main">
+							<ion-icon name="share-social"></ion-icon>
+							<ion-icon name="heart"></ion-icon>
+							<ion-icon name="chatbubble"></ion-icon>
+						</div>
+					</div>
+				</div>
+				<div class="popup_desc_main">
+					<p>The port is beautiful, the heart of Marseille. In the hot summer, the port comes alive in the evening.
+						Full of people and families going out to eat and drink, watch street musicians. Really lively and fun
+						atmosphere. And beautiful large squares on the south side of the port, just go a little inside the streets
+						and you find them.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="exp6_popup">
+		<div class="popup-window">
+			<button class="close" id="exp6_close">&times;</button>
+			<div class="popup_content_main">
+				<div class="popup_info_main">
+					<img class="popup_img_main" src="./images/experiences/hostaria.jpg" alt="hostaria_image">
+					<div class="popup_details_main">
+						<p class="details_title_main">Hostaria al gladiatore</p>
+						<p>Location: Rome, Italy</p>
+						<p>By Pierre Ouef</p>
+						<p>Budget: 20-40$</p>
+						<div class="tags_row_main">
+							<p class="tag_main">#Family Friendly</p>
+							<p class="tag_main">#Good for groups</p>
+						</div>
+						<p>12k likes</p>
+						<div class="interaction_buttons_main">
+							<ion-icon name="share-social"></ion-icon>
+							<ion-icon name="heart"></ion-icon>
+							<ion-icon name="chatbubble"></ion-icon>
+						</div>
+					</div>
+				</div>
+				<div class="popup_desc_main">
+					<p>This restaurant sits opposite the Colosseum and it truly is a spectacular sight for
+						you to feast your eyes upon when you’re not feasting on their delicious pasta!
+						We took the set menu which contained a glass of wine, bruschetta, and a pasta dish for €15.
+						The carbonara was incredible and we mopped our plates up with bread. Roberto was an excellent
+						host and made our dinner experience even more enjoyable. I look forward to returning when back in Rome!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- ###### Section for the footer ######-->
 	<!-- It contains additional information like TOS or Privacy Policy-->
-	<footer>
-		<div id="footer_container">
-			<div class="logo-container">
-            <img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+	<footer id="footer_container">
+		<div id="logo_container_f">
+            <img id="footer_logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
         </div>
         <div class="footer_links">
             <ul>
@@ -236,15 +442,15 @@
             <a href="https://twitter.com/" class="fa fa-twitter"></a>
             <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
         </div>
-		</div>
 	</footer>
 
-  <!-- THis section is used to be able to put icons in the page-->
+
+  	<!-- THis section is used to be able to put icons in the page-->
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
 	<script src="https://unpkg.com/jquery/dist/jquery.js"></script>
 	<script src="https://unpkg.com/image-map/dist/image-map.jquery.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-	<script src="./scripts/script.js"></script>
+	<script src="./script/scripts.js"></script>
 </body>

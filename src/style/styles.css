@@ -36,70 +36,97 @@ main{
   background-color: #283EFF;
 }
 
-
-/*################### START HEADER ###################*/
-
-/* Specify the format of the elements inside the header */
-#header-container {
-  background-color: #FFFFFF;
-  display: flex;
-  flex-wrap: wrap;
-  box-shadow: 0px 7px 8px rgba(40, 245, 255, 0.2);
-  justify-content: space-between;
-}
-
-#header-container > div {
-  margin: 5px;
-}
-
-/*----- START LOGO -----*/
-
-#logo-container {
-  padding: 5px;
-}
-
-/*Set the max size to 3/4 of real size */
-.logo {
-  max-width: 300px;
-  max-height: 150px;
-}
-
-.nav-buttons{
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.nav-buttons div{
-  min-width: 140px;
+/*######## HEADER ########*/
+#header_container{
   width: 100%;
   display: flex;
-  padding: 5px 15px;
-  border-radius: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 7px 8px rgba(40, 245, 255, 0.2);
+}
+
+#logo_container{
+  width: 30%;
+  margin: 10px 0px 10px 10px;
+}
+
+#header_logo{
+  width: 100%;
+  max-width: 300px;
+  max-height: 70px;
+}
+
+#menu_full_page{
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3%;
+}
+
+.menu_option{
+  display: flex;
+  gap: 2%;
+  padding: 5px 20px;
   box-sizing: border-box;
+  cursor: pointer;
   font-size: 18px;
+  min-width: 140px;
+  border-radius: 20px;
   justify-content: center;
-  margin-right: 10px;
 }
 
-.nav-buttons div p{
-  padding-left: 10px;
-  box-sizing: border-box;
-}
-
-.nav-buttons div:hover{
+.menu_option:hover{
   background-color: #4C61FF;
   color: #FFFFFF;
 }
-#signin-button{
-  min-width: auto;
+
+#user_part{
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+#signin_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  gap: 2%;
   background-color: #4C61FF;
   color: #FFFFFF;
-  margin-right: 50px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 10px;
 }
-/*----- END LOGO -----*/
 
-/*################### END HEADER ###################*/
+#user_logged{
+  display: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+#user_logged > ion-icon {
+  width: 24px;
+  height: 24px;
+}
+
+#user_logged > img{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#user_logged > p{
+  font-size: 18px;
+}
+
+/*##### END HEADER #####*/
 
 /*Design for the breadcrum*/
 #breadcrum{
@@ -118,49 +145,53 @@ main{
   display: flex;
   width: 75%;
   background-color: #4C61FF;
-  height: 200px;
   border-radius: 30px;
   text-align: center;
   justify-content: center;
   margin: auto;
-  margin-top: 2.5%;
+  margin-top: 30px;
   flex-direction: column;
 }
 
 #filters_container{
-  justify-content: space-around;
   display: flex;
+  gap: 5%;
   width: 100%;
-  margin-bottom: 1.5%;
+  margin-bottom: 10px;
+  justify-content: center;
 }
 
 #filters_container button{
-  width: 25%;
+  width: 28%;
   gap: 5%;
   padding: 20px 0px;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 15px;
   background-color: #FFFFFF;
   border: 1px solid #000000;
   transition-duration: 0.4s;
   cursor: pointer;
+  margin: 10px 0px;
 }
+
 #filters_container button:hover{
   background-color: #9ce6ff;
 }
+
 #search_bar{
   width: 100%;
-  height: auto;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 2%;
 }
 
 #search_bar input[type="search"]{
-  width: 90%;
+  width: 80%;
   height: 55px;
-  border-radius: 30px 0px 0px 30px;
+  border-radius: 30px;
   border: 1px solid #000000;
-  border-right: none;
   box-sizing: border-box;
   font-size: 18px;
   text-indent: 10px;
@@ -168,21 +199,21 @@ main{
 
 #search_bar button{
   height: 55px;
-  padding: 0px 25px;
-  border-radius: 0px 30px 30px 0px;
-  margin-left: -8px;
+  width: 55px;
+  border-radius: 50%;
   border: 1px solid #000000;
-  border-left: none;
   font-size: 18px;
   box-sizing: border-box;
   background-color: #FFFFFF;
   color: #000000;
+  cursor: pointer;
 }
 
 #search_bar button:hover{
   background-color: #9ce6ff;
 }
 /*################### END SEARCH BAR ###################*/
+
 /*################### START EXPERIENCES ###################*/
 #experiences {
   width: 75%;
@@ -248,6 +279,154 @@ main{
 
 /*################### END EXPERIENCES ###################*/
 
+/*################### START EXPERIENCES POP UPS ###################*/
+.popup_content_main {
+  width: 1000px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: flex-start;
+  align-items: stretch;
+  text-align: left;
+}
+
+.popup_info_main {
+  height: 45%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.popup_img_main {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.popup_details_main {
+  margin: 20px 0px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 50%;
+}
+
+.tags_row_main {
+  display: flex;
+  gap: 3%;
+}
+
+.tag_main {
+  background-color: #BCE0FF;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.details_title_main {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.interaction_buttons_main {
+  display: flex;
+  column-gap: 3%;
+}
+
+.interaction_buttons_main ion-icon {
+  font-size: 30px;
+}
+
+.popup_desc_main {
+  height: 45%;
+  width: 95%;
+  background-color: #D9DADB;
+  border-radius: 10px;
+  padding: 20px;
+}
+/*################### END EXPERIENCES POP UPS ###################*/
+
+/*################### START FOOTER ###################*/
+
+/* Specify the format of the elements inside the footer */
+#footer_container{
+  background-color: #FFFFFF;
+  display: flex;
+  align-self: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  box-shadow: 0px -7px 8px rgba(40, 245, 255, 0.2);
+  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#footer_logo{
+  width: 100%;
+  max-width: 300px;
+  max-height: 70px;
+}
+
+.footer_links {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_links ul {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.footer_links ul li {
+    display: flex;
+    justify-content: stretch;
+    width: 50%;
+}
+
+.footer_links ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    height: 10vh;
+    margin: 0 10%;
+    padding: 2% 15%;
+    font-size: 1.3vmax;
+}
+
+.footer_icons {
+    display: flex;
+    justify-content: flex-end;
+}
+.fa {
+    padding: 1vw;
+    font-size: 30px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.5vw;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+/*################### END FOOTER ###################*/
 
 /*################### START POPUP ###################*/
 /* Common class for all popups. It creates the semi-opaque background*/
@@ -257,7 +436,7 @@ main{
   height: 100%;
   position: fixed;
   top: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -413,79 +592,103 @@ main{
 
 /*################### END POPUP ###################*/
 
-/*################### START FOOTER ###################*/
+/*##### RESPONSIVE PART #####*/
 
-/* Specify the format of the elements inside the footer */
-#footer_container{
-  background-color: #FFFFFF;
-  display: flex;
-  align-self: flex-end;
-  flex-wrap: wrap;
-  width: 100%;
-  box-shadow: 0px -7px 8px rgba(40, 245, 255, 0.2);
-  min-height: 40px;
-  justify-content: center;
-  align-items: center;
+@media screen and (max-width: 1100px) {
+  .exp-container{
+    width: 48%;
+  }
 }
 
-.footer_links {
-    display: flex;
-    width: 60%;
-    align-items: center;
-    justify-content: center;
-}
+@media screen and (max-width: 930px) {
+  #header_container{
+    flex-wrap: wrap;
+  }
 
-.footer_links ul {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    list-style-type: none;
-    overflow: hidden;
-}
+  #logo_container{
+    width: 45%;
+    order: 1;
+  }
 
-.footer_links ul li {
-    display: flex;
-    justify-content: stretch;
-    width: 50%;
-}
+  #user_part{
+    width: 45%;
+    order: 2;
+  }
 
-.footer_links ul li a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    height: 10vh;
-    margin: 0 10%;
-    padding: 2% 15%;
-    font-size: 1.3vmax;
-}
-
-.footer_icons {
-    display: flex;
+  #user_part > div{
     justify-content: flex-end;
-}
-.fa {
-    padding: 1vw;
-    font-size: 30px;
+  }
+
+  #menu_full_page{
+    order: 3;
+    flex-direction: column;
     width: 100%;
-    height: auto;
-    text-align: center;
-    text-decoration: none;
-    margin: 0.5vw;
+  }
+
+  #menu_full_page > div{
+    margin: 10px;
+  }
+
+  #footer_container{
+    flex-direction: column;
+  }
+
+  #logo_container_f{
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+  }
+
+  .footer_links{
+    order: 3;
+    width: 100%;
+  }
+
+  .footer_icons{
+    order: 2;
+    width: 80%;
+    margin: 10px auto;
+  }
 }
 
-.fa-facebook {
-    background: #3B5998;
-    color: white;
-}
+@media screen and (max-width: 700px) {
+  #search_tool{
+    width: 85%;
+  }
 
-.fa-twitter {
-    background: #55ACEE;
-    color: white;
-}
+  #filters_container{
+  flex-direction: column;
+  margin: 10px 0px;
+  }
 
-.fa-instagram {
-    background: #125688;
-    color: white;
+  #filters_container button{
+    width: 80%;
+    padding: 5px 0px;
+    font-size: 16px;
+    margin: 5px auto;
+  }
+
+  #search_bar{
+    width: 85%;
+    margin: 0px auto 20px auto;
+  }
+
+  #search_bar input[type="search"]{
+    width: 80%;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  #search_bar button{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    font-size: 16px;
+  }
+
+  .exp-container{
+    width: 100%;
+  }
 }
-/*################### END FOOTER ###################*/

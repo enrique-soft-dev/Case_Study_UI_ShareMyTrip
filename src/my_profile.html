@@ -7,36 +7,41 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./style/styles.css">
-  <link rel="stylesheet" href="./style/styles_mp.css">
+	<link rel="stylesheet" href="./style/styles_mp.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>ShareMyTrip - Home</title>
+	<title>ShareMyTrip - My profile</title>
 </head>
 
 <body>
-  <!-- ###### Section for the header ######-->
+	<!-- ###### Section for the header ######-->
 	<!-- It contains the logo of the webpage and the title o it-->
-  <header>
-    <div id="header-container">
-      <div id="logo-container">
-				<img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
-      </div>
-			<div class="nav-buttons" id="nav-butons">
-				<div id="home">
-					<ion-icon name="home"></ion-icon>
-					<p>Home</p>
-				</div>
-				<div id="add-plan">
-					<ion-icon name="map-outline"></ion-icon>
-					<p>Add plan</p>
-				</div>
-				<div id="ranking">
-					<ion-icon name="trophy-outline"></ion-icon>
-					<p>Ranking</p>
-				</div>
-				<div id="signin-button">
-					<ion-icon name="person-outline"></ion-icon>
-					<p>Sign in</p>
-				</div>
+	<header id="header_container">
+		<div id="logo_container">
+			<img id="header_logo" src="./images/SHAREMYTRIP_free-file.png" alt="sharemytrip logo">
+		</div>
+		<div id="menu_full_page">
+			<div class="menu_option" id="home">
+				<ion-icon name="home-outline"></ion-icon>
+				<p>Home</p>
+			</div>
+			<div class="menu_option" id="add_plan">
+				<ion-icon name="map-outline"></ion-icon>
+				<p>Add plan</p>
+			</div>
+			<div class="menu_option" id="ranking">
+				<ion-icon name="trophy-outline"></ion-icon>
+				<p>Rankings</p>
+			</div>
+		</div>
+		<div id="user_part">
+			<div id="signin_button">
+				<ion-icon name="person-outline"></ion-icon>
+				<p>Sign in</p>
+			</div>
+			<div id="user_logged">
+				<img id="user_img" src="./images/luisito_profile.jpg" alt="profile picture">
+				<p id="user_username">@User1</p>
+				<ion-icon id="messages_icon" name="paper-plane-outline"></ion-icon>
 			</div>
 		</div>
 	</header>
@@ -180,10 +185,11 @@
 
 	<!-- ###### Section for the footer ######-->
 	<!-- It contains additional information like TOS or Privacy Policy-->
-  <footer>
-    <div id="footer_container">
-      <div class="logo-container">
-            <img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+	<!-- ###### Section for the footer ######-->
+	<!-- It contains additional information like TOS or Privacy Policy-->
+	<footer id="footer_container">
+		<div id="logo_container_f">
+            <img id="footer_logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
         </div>
         <div class="footer_links">
             <ul>
@@ -191,13 +197,12 @@
                 <li><a href="privacy.html">Privacy Policy</a></li>
             </ul>
         </div>
-        <div class="footer_icons">
+				<div class="footer_icons">
             <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
             <a href="https://twitter.com/" class="fa fa-twitter"></a>
             <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
         </div>
-    </div>
-  </footer>
+	</footer>
 
   <!-- THis section is used to be able to put icons in the page-->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -206,5 +211,5 @@
   <script src="https://unpkg.com/jquery/dist/jquery.js"></script>
   <script src="https://unpkg.com/image-map/dist/image-map.jquery.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-  <script src="./scripts/script.js"></script>
+  <script src="./script/scripts.js"></script>
   </body>

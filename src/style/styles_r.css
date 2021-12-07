@@ -86,3 +86,21 @@
   align-items: last baseline;
   border: 1px solid #000000;
 }
+
+.smartphone{
+  display: none;
+}
+
+@media screen and (max-width: 930px) {
+  .smartphone{
+    display: flex;
+  }
+
+  #second-ranked{
+    display: none;
+  }
+
+  #third-ranked{
+    display: none;
+  }
+}

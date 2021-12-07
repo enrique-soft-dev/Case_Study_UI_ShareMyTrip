@@ -7,36 +7,41 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./style/styles.css">
-  <link rel="stylesheet" href="./style/styles_ap.css">
+	<link rel="stylesheet" href="./style/styles_ap.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>ShareMyTrip - Add Plan</title>
 </head>
 
 <body>
-  <!-- ###### Section for the header ######-->
+	<!-- ###### Section for the header ######-->
 	<!-- It contains the logo of the webpage and the title o it-->
-  <header>
-    <div id="header-container">
-      <div id="logo-container">
-				<img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
-      </div>
-			<div class="nav-buttons" id="nav-butons">
-				<div id="home">
-					<ion-icon name="home-outline"></ion-icon>
-					<p>Home</p>
-				</div>
-				<div id="add-plan">
-					<ion-icon name="map"></ion-icon>
-					<p>Add plan</p>
-				</div>
-				<div id="ranking">
-					<ion-icon name="trophy-outline"></ion-icon>
-					<p>Ranking</p>
-				</div>
-				<div id="signin-button">
-					<ion-icon name="person-outline"></ion-icon>
-					<p>Sign in</p>
-				</div>
+	<header id="header_container">
+		<div id="logo_container">
+			<img id="header_logo" src="./images/SHAREMYTRIP_free-file.png" alt="sharemytrip logo">
+		</div>
+		<div id="menu_full_page">
+			<div class="menu_option" id="home">
+				<ion-icon name="home-outline"></ion-icon>
+				<p>Home</p>
+			</div>
+			<div class="menu_option" id="add_plan">
+				<ion-icon name="map"></ion-icon>
+				<p>Add plan</p>
+			</div>
+			<div class="menu_option" id="ranking">
+				<ion-icon name="trophy-outline"></ion-icon>
+				<p>Rankings</p>
+			</div>
+		</div>
+		<div id="user_part">
+			<div id="signin_button">
+				<ion-icon name="person-outline"></ion-icon>
+				<p>Sign in</p>
+			</div>
+			<div id="user_logged">
+				<img id="user_img" src="./images/luisito_profile.jpg" alt="profile picture">
+				<p id="user_username">@User1</p>
+				<ion-icon name="paper-plane-outline"></ion-icon>
 			</div>
 		</div>
 	</header>
@@ -95,12 +100,82 @@
 	  </div>
 	</main>
 
+	<!-- Section fo the popups of the page. They include login, signup and experiences -->
+	<div class="popup" id="login-popup">
+		<div class="popup-window">
+			<button class="close" id="login-close">&times;</button>
+			<div id="login-container">
+				<div class="popup-header">
+					<img class="popup-logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+					<p>SIGN IN</p>
+				</div>
+				<form id="login-content">
+					<p>Email:</p>
+					<input class="login-input" id="lemail" type="email" placeholder="Email" required>
+					<p>Password:</p>
+					<input class="login-input" id="lpassword" type="password" placeholder="Password" required>
+					<input type="submit" id="login-b" name="log in button" value="Sign in">
+				</form>
+				<div class="other-option">
+					<p>Don't have an account yet?</p>
+					<div id="change-to-signup">Sign Up</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup" id="signup-popup">
+		<div class="popup-window">
+			<button class="close" id="signup-close">&times;</button>
+			<div id="signup-container">
+				<div class="popup-header">
+					<img class="popup-logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+					<p>SIGN UP</p>
+				</div>
+				<form id="signup-content">
+					<div id="comp-name-sur">
+						<div class="comp-ns">
+							<p>Name:</p>
+							<input class="signup-input" id="sname" type="text" placeholder="John" required>
+						</div>
+						<div class="comp-ns">
+							<p>Surname:</p>
+							<input class="signup-input" id="ssurname" type="text" placeholder="Smith Hudson" required>
+						</div>
+					</div>
+					<p>Username:</p>
+					<input class="signup-input" id="susername" type="text" placeholder="example123" required>
+					<p>Email:</p>
+					<input class="signup-input" id="semail" type="email" placeholder="example@gmail.com" required>
+					<p>Password:</p>
+					<input class="signup-input" id="spassword" type="password" placeholder="secret" required>
+					<p>Date of birth:</p>
+					<input class="signup-input" id="dob" type="date" required>
+					<p>Profile picture: (optional)</p>
+					<input class="signup-input" id="profile-img" type="file">
+					<div class="check-div">
+						<input type="checkbox" id="terms-of-service" name="tou" value="ToS" required>
+						<label for="terms-of-service">By continuing, you agree to the SHAREMYTRIP Terms of Service and Privacy Policy, including our cookie policy.</label><br>
+					</div>
+					<div class="check-div">
+						<input type="checkbox" id="spam" name="spam" value="spam">
+						<label for="spam">I agree to receive emails about SHAREMYTRIP products, services and local events.</label><br>
+					</div>
+					<input type="submit" id="signup-b" name="sigunup-button" value="Sign up">
+				</form>
+				<div class="other-option">
+					<p>Already have an account?</p>
+					<div id="change-to-signup">Sign In</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
   <!-- ###### Section for the footer ######-->
 	<!-- It contains additional information like TOS or Privacy Policy-->
-	<footer>
-		<div id="footer_container">
-			<div class="logo-container">
-            <img class="logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
+	<footer id="footer_container">
+		<div id="logo_container_f">
+            <img id="footer_logo" src="./images/SHAREMYTRIP_free-file.png" alt="logo">
         </div>
         <div class="footer_links">
             <ul>
@@ -113,7 +188,6 @@
             <a href="https://twitter.com/" class="fa fa-twitter"></a>
             <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
         </div>
-		</div>
 	</footer>
 
   <!-- THis section is used to be able to put icons in the page-->
@@ -123,5 +197,5 @@
 	<script src="https://unpkg.com/jquery/dist/jquery.js"></script>
 	<script src="https://unpkg.com/image-map/dist/image-map.jquery.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-	<script src="./scripts/script.js"></script>
+	<script src="./script/scripts.js"></script>
 </body>
