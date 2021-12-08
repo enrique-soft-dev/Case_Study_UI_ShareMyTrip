@@ -72,19 +72,19 @@
 	  <div id="profile_container">
 			<div id="top_part">
 	    	<div id="img_profile">
-					<img id="profile" src="./images/avatars/luisito_profile.jpg" alt="profile image">
+					<img id="profile" src="./images/avatars/default.jpg" alt="profile image">
 				</div>
 				<div id="profile_info">
 					<div id="basic_info">
 						<h3>Basic information</h3>
 						<h4>Name:</h4>
-						<p>Luis Márquez Ramírez</p>
+						<p id="profile_name"></p>
 						<h4>Username:</h4>
-						<p>luisito_comunica</p>
+						<p id="profile_username"></p>
 						<h4>Birthdate:</h4>
-						<p>20 March 1991</p>
+						<p id="profile_dob"></p>
 						<h4>Email:</h4>
-						<p id="profile_email">100429073@gmail.com</p>
+						<p id="profile_email"></p>
 					</div>
 					<div id="additional_info">
 						<h3>Additional information</h3>
@@ -124,31 +124,27 @@
 					<img src="./images/collection.png" alt="experience">
 					<p>Add new experience</p>
 				</div>
-				<div class="experience">
-					<img src="./images/experiences/sydney.jpg" alt="sydney">
-					<div class="like-circle">
-						<ion-icon name="ellipsis-vertical-outline"></ion-icon>
-					</div>
-					<div class="options_exp">
-						<p>Edit experience</p>
-						<p>Delete experience</p>
-						<p>Add to experience</p>
-					</div>
-				</div>
-				<div class="experience">
-					<img src="./images/experiences/ecuador.jpg" alt="ecuador">
-					<div class="like-circle">
-						<ion-icon name="ellipsis-vertical-outline"></ion-icon>
-					</div>
-					<div class="options_exp">
-						<p>Edit experience</p>
-						<p>Delete experience</p>
-						<p>Add to experience</p>
-					</div>
-				</div>
 			</div>
 		</div>
 	</main>
+
+	<div class="popup" id="exp_popup">
+		<div class="popup-window">
+			<button class="close" id="exp_close">&times;</button>
+
+		</div>
+	</div>
+	<!--<div class="collection" id="coll1">
+		<img src="./images/experiences/marseille.jpg" alt="marseille">
+		<div class="like-circle" onclick="openOptions('#coll1_opt')">
+			<ion-icon name="ellipsis-vertical-outline"></ion-icon>
+		</div>
+		<div class="options" id="coll1_opt">
+			<button class="close" onclick="closeOptions('#coll1_opt')">&times;</button>
+			<p onclick="editCollection('#coll1')">Edit collection</p>
+			<p onclick="deleteCollection('#coll1')">Delete colletion</p>
+		</div>
+	</div>-->
 
 	<div class="popup" id="add_collection_popup">
 		<div class="popup-window">
@@ -159,7 +155,7 @@
 					<div id="add_coll_image">
 						<label>
 							<input id="add_coll_img" type="file" name="add-coll-img" required>
-							<img src="./images/no-image.png" alt="default">
+							<img id="coll_img" src="./images/no-image.png" alt="default">
 						</label>
 					</div>
 					<div id="add_coll_title">
@@ -179,12 +175,12 @@
 				<form id="edit_coll_form">
 					<div id="edit_coll_image">
 						<label>
-							<input id="edit_coll_img" type="file" name="edit-coll-img" required>
+							<input id="edit_coll_img" type="file" name="edit-coll-img">
 							<img id="edit_image" src="./images/no-image.png" alt="default">
 						</label>
 					</div>
 					<div id="edit_coll_title">
-						<input id="edit_coll_text" type="text" placeholder="Title of collection" required>
+						<input id="edit_coll_text" type="text" placeholder="Title of collection">
 						<input id="edit_coll" type="submit" value="Edit collection">
 					</div>
 				</form>
@@ -199,44 +195,99 @@
 			<div id="add_experience_container">
 				<h3>ADD A NEW EXPERIENCE</h3>
 				<form id="add_exp_form">
-					<div id="add_exp_top_section">
-						<div id="short_q_add_exp">
-							<p>Where is the experience?</p>
-							<input class="add_exp_input" id="add_exp_where" type="text" required>
-							<p>Add collaborators</p>
-							<input class="add_exp_input" id="add_exp_collab" type="text">
-						</div>
-						<div id="img_add_exp">
-							<label>
-								<input type="file" name="add-exp-img" required>
-								<img src="./images/no-image.png" alt="default">
-							</label>
-						</div>
+					<div id="img_add_exp">
+						<label>
+							<input id="add_exp_img" type="file" name="add_exp_img" required>
+							<img id="exp_img" src="./images/no-image.png" alt="default">
+						</label>
+					</div>
+					<div id="short_q_add_exp">
+						<p>Where is the experience?</p>
+						<input class="add_exp_input" id="add_exp_where" placeholder="Write a place" type="text" required>
+						<p>Add collaborators</p>
+						<input class="add_exp_input" id="add_exp_collab" placeholder="Write the usernames" type="text">
 					</div>
 					<div id="add_exp_bottom_section">
 						<p>Description of the place</p>
-						<textarea name="description" rows="4" cols="50"></textarea>
+						<textarea id="add_exp_desc" name="description" rows="15" cols="30"></textarea>
 						<p>Categorie(s)</p>
-						<input type="checkbox" id="cat1" name="cat1" value="Landmarks">
-						<label for="cat1">Landmarks</label>
-		        <input type="checkbox" id="cat2" name="cat2" value="Food">
-						<label for="cat2">Food</label>
-		        <input type="checkbox" id="cat3" name="cat3" value="Actvities">
-						<label for="cat3">Activity</label>
+						<div id="add_exp_cat">
+							<input type="checkbox" id="cat1" name="cat1" value="Landmarks">
+							<label for="cat1">Landmarks</label>
+			        <input type="checkbox" id="cat2" name="cat2" value="Food">
+							<label for="cat2">Food</label>
+			        <input type="checkbox" id="cat3" name="cat3" value="Actvities">
+							<label for="cat3">Activity</label>
+						</div>
 						<p>Other tags</p>
-						<input type="checkbox" id="feature1" name="feature1" value="Family">
-						<label for="feature1">Family friendly</label>
-		        <input type="checkbox" id="feature2" name="feature2" value="Groups">
-						<label for="feature2">Good for groups</label>
-		        <input type="checkbox" id="feature3" name="feature3" value="Booking">
-						<label for="feature3">Needs booking</label>
-		        <input type="checkbox" id="feature4" name="feature4" value="Urban">
-						<label for="feature4">Urban</label>
-		        <input type="checkbox" id="feature5" name="feature5" value="Nature">
-						<label for="feature5">In nature</label>
+						<div id="add_exp_tag">
+							<input type="checkbox" id="feature1" name="feature1" value="Family">
+							<label for="feature1">Family friendly</label>
+			        <input type="checkbox" id="feature2" name="feature2" value="Groups">
+							<label for="feature2">Good for groups</label>
+			        <input type="checkbox" id="feature3" name="feature3" value="Booking">
+							<label for="feature3">Needs booking</label>
+			        <input type="checkbox" id="feature4" name="feature4" value="Urban">
+							<label for="feature4">Urban</label>
+			        <input type="checkbox" id="feature5" name="feature5" value="Nature">
+							<label for="feature5">In nature</label>
+						</div>
 					</div>
 					<div id="add_exp_button">
-						<input type="submit" name="add-exp" value="Add new expereience">
+						<input id="create_experience" type="submit" name="add-exp" value="Add new experience">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--Popup for editing an experience-->
+	<div class="popup" id="edit_experience_popup">
+		<div class="popup-window">
+			<button class="close" id="edit_exp_close">&times;</button>
+			<div id="edit_experience_container">
+				<h3>EDIT EXPERIENCE</h3>
+				<form id="edit_exp_form">
+					<div id="img_edit_exp">
+						<label>
+							<input id="edit_exp_img" type="file" name="edit_exp_img">
+							<img id="edit_img_exp" src="./images/no-image.png" alt="default">
+						</label>
+					</div>
+					<div id="short_q_edit_exp">
+						<p>Where is the experience?</p>
+						<input class="add_exp_input" id="edit_exp_where" type="text">
+						<p>Add collaborators</p>
+						<input class="add_exp_input" id="edit_exp_collab" type="text">
+					</div>
+					<div id="edit_exp_bottom_section">
+						<p>Description of the place</p>
+						<textarea id="edit_exp_desc" name="description" rows="15" cols="30"></textarea>
+						<p>Categorie(s)</p>
+						<div id="edit_exp_cat">
+							<input type="checkbox" id="cat1_edit" name="cat1" value="Landmarks">
+							<label for="cat1">Landmarks</label>
+			        <input type="checkbox" id="cat2_edit" name="cat2" value="Food">
+							<label for="cat2">Food</label>
+			        <input type="checkbox" id="cat3_edit" name="cat3" value="Actvities">
+							<label for="cat3">Activity</label>
+						</div>
+						<p>Other tags</p>
+						<div id="edit_exp_tag">
+							<input type="checkbox" id="feature1_edit" name="feature1" value="Family">
+							<label for="feature1">Family friendly</label>
+			        <input type="checkbox" id="feature2_edit" name="feature2" value="Groups">
+							<label for="feature2">Good for groups</label>
+			        <input type="checkbox" id="feature3_edit" name="feature3" value="Booking">
+							<label for="feature3">Needs booking</label>
+			        <input type="checkbox" id="feature4_edit" name="feature4" value="Urban">
+							<label for="feature4">Urban</label>
+			        <input type="checkbox" id="feature5_edit" name="feature5" value="Nature">
+							<label for="feature5">In nature</label>
+						</div>
+					</div>
+					<div id="edit_exp_button">
+						<input id="edit_experience" type="submit" name="edit-exp" value="Edit experience">
 					</div>
 				</form>
 			</div>
@@ -248,33 +299,23 @@
 			<button class="close" id="change_profile_close">&times;</button>
 			<div id="change_profile_container">
 				<div class="my_profile_info">
-					<img src="" alt="Profile picture" id="myprofile_avatar">
-					<button id="change_avatar" class="display_form">Change profile picture...</button>
-					<form id="avatar_change_form" class="hidden_form">
-					 <input type="file" id="file_avatar_change" autocomplete="off">
-					 <button id="submit_avatar_change">Submit changes</button>
-					</form>
-					<p id="myprofile_username"></p>
-					<button id="change_username" class="display_form">Change username...</button>
-					<form id="username_change_form" class="hidden_form">
-					 <input type="text" id="text_username_change" autocomplete="off">
-					 <button id="submit_username_change">Submit changes</button>
-					</form>
-					<form id="instagram_form" class="profile_form">
+					<h3>Change your profile information</h3>
+					<div id="change_image">
+						<img src="./images/avatars/default.jpg" alt="Profile picture" id="my_profile_avatar">
+					</div>
+					<form id="avatar_change_form" class="profile_form">
+						<input type="file" id="file_avatar_change" autocomplete="off">
+						<p>Username:</p>
+					 	<input type="text" id="text_username_change" placeholder="" autocomplete="off">
+						<p>Instagram account:</p>
 						<input type="text" id="instagram_account" autocomplete="off">
- 						<button id="submit_instagram_change">Add Instagram account</button>
-					</form>
-					<form id="facebook_form" class="profile_form">
+						<p>Facebook account:</p>
 						<input type="text" id="facebook_account" autocomplete="off">
-						<button id="submit_facebook_change">Add Facebook account</button>
-					</form>
-					<form id="twitter_form" class="profile_form">
+						<p>Twitter account:</p>
 						<input type="text" id="twitter_account" autocomplete="off">
-						<button id="submit_twitter_change">Add Twitter account</button>
-					</form>
-					<form id="interests_form" class="profile_form">
-						<input type="text" id="interests-information" autocomplete="off">
-						<button id="submit_interest_change">Submit interests</button>
+						<p>Interests:</p>
+						<textarea id="interests_info" name="interests" rows="3" cols="30"></textarea>
+						<button id="submit_profile_info">Save changes</button>
 					</form>
 				</div>
 			</div>

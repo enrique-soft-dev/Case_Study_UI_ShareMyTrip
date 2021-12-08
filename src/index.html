@@ -38,7 +38,7 @@
 				<p>Sign in</p>
 			</div>
 			<div id="user_logged">
-				<img id="user_img" src="./images/luisito_profile.jpg" alt="profile picture">
+				<img id="user_img" src="./images/default.jpg" alt="profile picture">
 				<p id="user_username">@User1</p>
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 	<div id="sidebar_user">
 		<button class="close" id="sidebar_close">&times;</button>
 		<div id="logged_user">
-			<img id="img_user" src="./images/luisito_profile.jpg" alt="profile picture">
+			<img id="img_user" src="./images/default.jpg" alt="profile picture">
 			<p id="username_user">@User1</p>
 		</div>
 		<div id="user-menu">
@@ -106,10 +106,10 @@
 		<!-- It contains the list of main experiences-->
 		<div id="experiences">
 			<div id="exp1" class="exp-container">
-				<div class="like-circle">
+				<div class="like-circle" id="japan_not_liked" onclick="like('#japan_not_liked', '#japan_liked')">
 					<ion-icon name="heart-outline"></ion-icon>
 				</div>
-				<div class="like-circle-active" id="japan">
+				<div class="like-circle-active" id="japan_liked" onclick="dislike('#japan_not_liked', '#japan_liked')">
 					<ion-icon name="heart"></ion-icon>
 				</div>
 				<img class="image-container" src="./images/experiences/japan.jpg" alt="japan">
@@ -121,10 +121,10 @@
 
 			<div id="exp2" class="exp-container">
 					<img class="image-container" src="./images/experiences/iceland.jpg" alt="iceland">
-					<div class="like-circle">
+					<div class="like-circle" id="iceland_not_liked" onclick="like('#iceland_not_liked', '#iceland_liked')">
 						<ion-icon name="heart-outline"></ion-icon>
 					</div>
-					<div class="like-circle-active" id="sweden">
+					<div class="like-circle-active" id="iceland_liked" onclick="dislike('#iceland_not_liked', '#iceland_liked')">
 						<ion-icon name="heart"></ion-icon>
 					</div>
 					<div class="text-container">
@@ -135,10 +135,10 @@
 
 			<div id="exp3" class="exp-container">
 				<img class="image-container" src="./images/experiences/sydney.jpg" alt="sydney">
-				<div class="like-circle">
+				<div class="like-circle" id="sydney_not_liked" onclick="like('#sydney_not_liked', '#sydney_liked')">
 					<ion-icon name="heart-outline"></ion-icon>
 				</div>
-				<div class="like-circle-active" id="sydney">
+				<div class="like-circle-active" id="sydney_liked" onclick="dislike('#sydney_not_liked', '#sydney_liked')">
 					<ion-icon name="heart"></ion-icon>
 				</div>
 				<div class="text-container">
@@ -149,10 +149,10 @@
 
 			<div id="exp4" class="exp-container">
 				<img class="image-container" src="./images/experiences/ecuador.jpg" alt="ecuador">
-				<div class="like-circle">
+				<div class="like-circle" id="ecuador_not_liked" onclick="like('#ecuador_not_liked', '#ecuador_liked')">
 					<ion-icon name="heart-outline"></ion-icon>
 				</div>
-				<div class="like-circle-active" id="banos">
+				<div class="like-circle-active" id="ecuador_liked" onclick="dislike('#ecuador_not_liked', '#ecuador_liked')">
 					<ion-icon name="heart"></ion-icon>
 				</div>
 				<div class="text-container">
@@ -163,10 +163,10 @@
 
 			<div id="exp5" class="exp-container">
 				<img class="image-container" src="./images/experiences/marseille.jpg" alt="marseille">
-				<div class="like-circle">
+				<div class="like-circle" id="marseille_not_liked" onclick="like('#marseille_not_liked', '#marseille_liked')">
 					<ion-icon name="heart-outline"></ion-icon>
 				</div>
-				<div class="like-circle-active" id="marseille">
+				<div class="like-circle-active" id="marseille_liked" onclick="dislike('#marseille_not_liked', '#marseille_liked')">
 					<ion-icon name="heart"></ion-icon>
 				</div>
 				<div class="text-container">
@@ -176,10 +176,10 @@
 			</div>
 
 			<div id="exp6" class="exp-container">
-				<div class="like-circle">
+				<div class="like-circle" id="hostaria_not_liked" onclick="like('#hostaria_not_liked', '#hostaria_liked')">
 					<ion-icon name="heart-outline"></ion-icon>
 				</div>
-				<div class="like-circle-active" id="hostaria">
+				<div class="like-circle-active" id="hostaria_liked" onclick="dislike('#hostaria_not_liked', '#hostaria_liked')">
 					<ion-icon name="heart"></ion-icon>
 				</div>
 				<img class="image-container" src="./images/experiences/hostaria.jpg" alt="hostaria">

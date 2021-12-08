@@ -166,7 +166,7 @@
   flex-wrap: wrap;
   width: 95%;
   gap: 4%;
-  margin: 20px auto 40px auto;
+  margin: 20px auto 100px auto;
 }
 
 .collection{
@@ -226,7 +226,7 @@
   height: 50%;
   top: 0;
   right: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -272,7 +272,7 @@
   display: none;
   flex-wrap: wrap;
   width: 95%;
-  margin: 20px auto;
+  margin: 20px auto 100px auto;
   gap: 4%;
 }
 
@@ -282,13 +282,22 @@
   height: 300px;
   border-radius: 15px;
   border: 1px solid #4C61FF;
+  background-color: #FFFFFF;
+  cursor: pointer;
 }
 
 .experience img{
   width: 100%;
-  height: 100%;
+  height: 85%;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.experience h4{
+  width: 80%;
+  height: 10%;
+  margin: auto;
+  text-align: center;
 }
 
 #add_new_experience{
@@ -374,6 +383,125 @@
   display: none;
 }
 
+/*##### ADD EXPERIENCE #####*/
+#add_experience_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  overflow-y: scroll;
+  height: 650px;
+  margin: 20px auto;
+}
+
+#add_experience_container h3{
+  margin: 20px auto;
+  height: 10%;
+}
+
+#add_exp_form{
+  width: 100%;
+  height: 90%;
+}
+
+#img_add_exp{
+  width: 90%;
+  margin: 10px auto;
+  background-color: #F0F0F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img_add_exp img{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+
+#img_add_exp label input{
+  display: none;
+}
+
+#short_q_add_exp{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#short_q_add_exp p{
+  width: 90%;
+  text-align: left;
+  margin: 5px auto;
+}
+
+#short_q_add_exp input{
+  width: 90%;
+  border-radius: 10px;
+  text-indent: 10px;
+  background-color: #F0F0F0;
+  border: none;
+  font-size: 14px;
+}
+
+#add_exp_bottom_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#add_exp_bottom_section p{
+  width: 90%;
+  text-align: left;
+  margin: 5px auto;
+}
+
+#add_exp_bottom_section textarea{
+  resize: none;
+  width: 90%;
+  border-radius: 10px;
+  text-indent: 10px;
+  background-color: #F0F0F0;
+  border: none;
+  font-size: 14px;
+}
+
+#add_exp_cat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+#add_exp_tag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+
+#add_exp_button{
+  width: 100%;
+  margin: 20px auto;
+}
+
+#create_experience{
+  background-color: #4C61FF;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 70%;
+  margin: 0px auto;
+}
+
 /*##### EDIT COLLECTION #####*/
 #edit_collection_container{
   display: flex;
@@ -437,6 +565,125 @@
   display: none;
 }
 
+/*###### EDIT EXPERIENCE ######*/
+#edit_experience_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  overflow-y: scroll;
+  height: 650px;
+  margin: 20px auto;
+}
+
+#edit_experience_container h3{
+  margin: 20px auto;
+  height: 10%;
+}
+
+#edit_exp_form{
+  width: 100%;
+  height: 90%;
+}
+
+#img_edit_exp{
+  width: 90%;
+  margin: 10px auto;
+  background-color: #F0F0F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img_edit_exp img{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+
+#img_edit_exp label input{
+  display: none;
+}
+
+#short_q_edit_exp{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#short_q_edit_exp p{
+  width: 90%;
+  text-align: left;
+  margin: 5px auto;
+}
+
+#short_q_edit_exp input{
+  width: 90%;
+  border-radius: 10px;
+  text-indent: 10px;
+  background-color: #F0F0F0;
+  border: none;
+  font-size: 14px;
+}
+
+#edit_exp_bottom_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#edit_exp_bottom_section p{
+  width: 90%;
+  text-align: left;
+  margin: 5px auto;
+}
+
+#edit_exp_bottom_section textarea{
+  resize: none;
+  width: 90%;
+  border-radius: 10px;
+  text-indent: 10px;
+  background-color: #F0F0F0;
+  border: none;
+  font-size: 14px;
+}
+
+#edit_exp_cat{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+#edit_exp_tag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+
+#edit_exp_button{
+  width: 100%;
+  margin: 20px auto;
+}
+
+#edit_experience{
+  background-color: #4C61FF;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  width: 70%;
+  margin: 0px auto;
+}
+
 
 @media screen and (max-width: 1050px) {
   #top_part{
@@ -453,6 +700,17 @@
   }
   #change_profile{
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 900px){
+  #collections_display{
+    justify-content: center;
+    align-items: center;
+  }
+  #experiences_display{
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -476,23 +734,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  height: 1000px;
+  width: 400px;
+  height: 650px;
   border-radius: 20px;
-}
-
-#avatar_change_form{
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-#username_change_form{
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
 }
 
 .my_profile_info{
@@ -503,8 +747,37 @@
   align-items: center;
 }
 
+#change_image{
+  width: 150px;
+  height: 150px;
+  margin: auto 0px;
+  display: flex;
+}
+
+#my_profile_avatar{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0px auto;
+}
+
+#file_avatar_change{
+  margin: 1% 0;
+}
+
+.my_profile_info img{
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .profile_form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 2%;
+  height: 60%;
 }
 
 .profile_form button{
@@ -512,69 +785,31 @@
   width: 80%;
   height: 15%;
   padding: 10px 0px;
-  font-size: 15px;
-  background-color: #FFFFFF;
+  font-size: 12px;
+  color: #FFFFFF;
+  background-color: #4C61FF;
   cursor: pointer;
   border-radius: 15px;
-  margin: 2% 0;
+  margin: 1% 0;
 }
 
-.profile_form input{
+.profile_form input[type="text"]{
   margin: 0px auto 15px auto;
   width: 80%;
   padding: 5px;
   box-sizing: border-box;
   background-color: #F4F4F4;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
-.hidden_form button{
-  border: 1px solid #000000;
+.profile_form textarea {
+  resize: none;
+  margin: 0px auto 15px auto;
   width: 80%;
-  height: 15%;
-  padding: 10px 0px;
-  font-size: 15px;
-  background-color: #FFFFFF;
-  cursor: pointer;
-  border-radius: 15px;
-  margin: 2% 0;
-}
-
-.hidden_form:hover{
-  background-color: #9ce6ff;
-}
-
-.display_form{
-  border: 1px solid #000000;
-  width: 80%;
-  height: 15%;
-  padding: 10px 0px;
-  font-size: 15px;
-  background-color: #FFFFFF;
-  cursor: pointer;
-  border-radius: 15px;
-  margin: 2% 0;
-}
-
-.display_form:hover{
-  background-color: #9ce6ff;
-}
-
-.profile_form button:hover{
-  background-color: #9ce6ff;
-}
-
-#instagram_form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-#interests_form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  border-radius: 10px;
+  font-size: 12px;
 }
