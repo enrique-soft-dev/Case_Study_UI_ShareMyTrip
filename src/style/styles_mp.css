@@ -120,6 +120,130 @@
 
 /*##### END PROFILE INFO #####*/
 
+/*##### EXPERIENCES PART #####*/
+#experiences_part{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#button_container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_text{
+  width:50%;
+}
+
+.button_text button{
+  border:none;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0px;
+  font-size: 20px;
+  background-color: #9ce6ff;
+  cursor: pointer;
+}
+
+.button_text button:hover{
+  background-color: #4C61FF;
+  color: #FFFFFF;
+}
+
+#collections_display{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  margin: 20px auto;
+}
+
+.collection{
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  border: 1px solid #4C61FF;
+}
+
+.collection img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+#add_new_collection{
+  background: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#add_new_collection img{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  opacity: 40%;
+}
+
+#add_new_collection p{
+  opacity: 40%;
+}
+
+#experiences_display{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  margin: 20px auto;
+}
+
+.experience{
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  border: 1px solid #4C61FF;
+}
+
+.experience img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+#add_new_experience{
+  background: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#add_new_experience img{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  opacity: 40%;
+}
+
+#add_new_experience p{
+  opacity: 40%;
+}
+
 /*##### ADD COLLECTION #####*/
 #add_collection_container{
   display: flex;
