@@ -122,3 +122,35 @@
   align-items: center;
   text-indent: 2px;
 }
+/*################### RESPONSIVE PART ###################*/
+@media only screen and (max-width:1300px) {
+  /* For tablet device: */
+  .open-chat {
+    margin-left:20px;
+  }
+  .text{
+    font-size: 13px;
+  }
+  .user-message{
+    width: 20%;
+    left: 78%;
+  }
+  .other-message{
+    width: 20%;
+  }
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .open-chat {
+    margin-left:20px;
+  }
+  .text{
+    font-size: 10px;
+  }
+  .user-message{
+    width: 30%;
+    left: 67%;
+  }
+  .other-message{
+    width: 30%;
+  }

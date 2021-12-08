@@ -1,4 +1,5 @@
 
+var numOfColls = 0;
 // General ready function that contains all the functions
 $(document).ready(function(){
   //Sign in open and close buttons
@@ -138,6 +139,83 @@ $(document).ready(function(){
     e.preventDefault()
     resetResults();
   })
+
+  $("#change_profile").click(function(){
+    openPopUp("#change_profile_popup");
+  })
+  $("#change_profile_close").click(function(){
+    closePopUp("#change_profile_popup");
+  })
+  $("#change_avatar").click(function(){
+    $("#avatar_change_form").css("display","flex");
+  })
+  $("#change_username").click(function(){
+    $("#username_change_form").css("display","flex");
+  })
+
+  $("#submit_instagram_change").click(function(){
+    let insta = $("#instagram_account").val();
+    insta = "Instagram: " + insta;
+    $("#instagram_profile").text(insta);
+  })
+
+  $("#submit_interests_change").click(function(){
+    let interests = $("#interests-information").val();
+    interests = "Interests: " + interests;
+    $("#interests_profile").text(interests);
+  })
+
+  $("#submit_twitter_change").click(function(){
+    let twitter = $("#twitter_account").val();
+    twitter = "Twitter: " + twitter;
+    $("#twitter_profile").text(twitter);
+  })
+
+  $("#submit_facebook_change").click(function(){
+    let facebook = $("#facebook_account").val();
+    facebook = "Facebook: " + facebook;
+    $("#facebook_profile").text(facebook);
+  })
+
+  $("#submit_username_change").click(function(){
+    let username = $("#text_username_change").val();
+    let email = $("#profile_email").val();
+    let cookie = getCookie(email);
+    cookie = cookie.split(",");
+    cookie[2] = username;
+    updateCookie(cookie[0],cookie[1],cookie[2],cookie[3],cookie[4],cookie[5],cookie[6]);
+    $("#avatar_change_form").hide();
+  })
+
+  $("#submit_avatar_change").click(function(){
+    let avatar = $("#file_avatar_change").val();
+    avatar = avatar.replace(/^.*\\/, "");
+    let path = "images/avatars/";
+    avatar = path + avatar;
+    let email = $("#profile_email").val();
+    let cookie = getCookie(email);
+    cookie = cookie.split(",");
+    cookie[5] = avatar;
+    updateCookie(cookie[0],cookie[1],cookie[2],cookie[3],cookie[4],cookie[5],cookie[6]);
+    $("#username_change_form").hide();
+  })
+
+  $("#button_collections").click(function(){
+    $("#button_coll").css("background-color", "#4C61FF")
+    $("#button_coll").css("color", "#FFFFFF")
+    $("#button_exp").css("background-color", "#9ce6ff")
+    $("#button_exp").css("color", "#000000")
+    $("#collections_display").css("display", "flex")
+    $("#experiences_display").css("display", "none")
+  })
+  $("#button_experiences").click(function(){
+    $("#button_exp").css("background-color", "#4C61FF")
+    $("#button_exp").css("color", "#FFFFFF")
+    $("#button_coll").css("background-color", "#9ce6ff")
+    $("#button_coll").css("color", "#000000")
+    $("#collections_display").css("display", "none")
+    $("#experiences_display").css("display", "flex")
+  })
   $("#search_button").click(function(e){
     e.preventDefault()
     window.scroll({top: 350, left: 0, behavior: 'smooth'});
@@ -150,10 +228,59 @@ $(document).ready(function(){
         } else {
           $(this).toggle(($(this).text().toLowerCase().indexOf(value) > -1));
         }
+        document.getElementById("results_text").innerHTML = 'Showing results for "' + $("#search_text").val() + '"';
       } else {
         $(this).toggle(((document.getElementById("landmarks_checkbox").checked && $(this).text().indexOf("#Landmark") > -1) || (document.getElementById("food_checkbox").checked && $(this).text().indexOf("#Food") > -1) || (document.getElementById("activities_checkbox").checked && $(this).text().indexOf("#Activity") > -1)));
+        document.getElementById("results_text").innerHTML = 'Showing results';
       }
     })
+  })
+  $("#add_new_collection").click(function(){
+    openPopUp("#add_collection_popup");
+  })
+  $("#add_collection_close").click(function(){
+    closePopUp("#add_collection_popup")
+  })
+  $("#add_coll_form").submit(function(e){
+    e.preventDefault();
+
+    let title = document.getElementById("add_coll_text").value;
+    let path = document.getElementById("add_coll_img").value;
+    let experience = "./images/experiences/";
+    path = path.replace(/^.*\\/, "");
+    experience += path;
+
+    addCollection(experience, title);
+    $("#add_coll_form")[0].reset();
+    closePopUp("#add_collection_popup")
+  })
+  $("#edit_collection_close").click(function(){
+    closePopUp("#edit_collection_popup");
+    let title = document.getElementById("edit_coll_text").value;
+    let path = document.getElementById("edit_image").src;
+    addCollection(path, title);
+    $("#edit_coll_form")[0].reset();
+  })
+  $("#edit_coll_form").submit(function(e){
+    e.preventDefault();
+
+    let title = document.getElementById("edit_coll_text").value;
+    let path = document.getElementById("edit_coll_img").value;
+    let experience = "./images/experiences/";
+    path = path.replace(/^.*\\/, "");
+    experience += path;
+
+    addCollection(experience, title);
+    $("#edit_coll_form")[0].reset();
+    closePopUp("#edit_collection_popup")
+
+  })
+
+  $("#add_coll_img").on("change", function(){
+    alert("Image loaded successfully")
+  })
+  $("#edit_coll_img").on("change", function(){
+    alert("Image loaded successfully")
   })
 });
 
@@ -177,6 +304,8 @@ function changeToUser(cookie_val){
   $("#user_username").html(cookie_val[2]);
   $("#user_img").attr("src", cookie_val[5]);
   $("#user_logged").css("display", "flex");
+  $("#my_profile_avatar").attr("src",cookie_val[5]);
+  $("#myprofile_username").text(cookie_val[2]);
 }
 
 function checkLogged(){
@@ -213,6 +342,50 @@ function resetResults(){
   $("#search_results").hide();
   $("#results_list .result_experience").show()
   $("#experiences").show();
+  $("#search_form")[0].reset();
+}
+
+function openOptions(id){
+  $(id).css("display", "flex");
+}
+
+function closeOptions(id){
+  $(id).css("display", "none")
+}
+
+function addCollection(image, title){
+  let newhtml = "<div class='collection' id='coll" + numOfColls + "'> <img id='image_coll" + numOfColls + "' src='" + image + "' alt='collection'> <h3 id='title_coll" + numOfColls + "'>" + title + "</h3>"
+  newhtml += "<div class='like-circle' onclick=openOptions('#coll" + numOfColls + "_opt')>"
+  newhtml += "<ion-icon name='ellipsis-vertical-outline'></ion-icon> </div> <div class='options' id='coll" + numOfColls + "_opt'>";
+  newhtml += "<button class='close' onclick=closeOptions('#coll" + numOfColls + "_opt')>&times;</button>"
+  newhtml += "<p onclick=editCollection('" + numOfColls + "')>Edit collection</p> <p onclick=deleteCollection('" + numOfColls + "')>Delete colletion</p> </div> </div>"
+
+  $("#collections_display").append(newhtml);
+  numOfColls += 1;
+}
+
+function editCollection(id){
+  openPopUp("#edit_collection_popup");
+  $("#edit_image").attr("src" , document.getElementById("image_coll" + id).src)
+  $("#edit_coll_text").attr("value", document.getElementById("title_coll" + id).innerHTML)
+  deleteCollection(id, '1');
+}
+
+function deleteCollection(id, flag = '0'){
+  console.log("Enters")
+  if (flag=='1'){
+    $("#coll" + id).remove();
+    numOfColls -= 1;
+  } else {
+    console.log("enters")
+    let r = confirm("Do you really want to remove the collection?")
+    if (r == true){
+      $("#coll" + id).remove();
+      numOfColls -= 1;
+    } else {
+      closeOptions("#coll" + id + "_opt");
+    }
+  }
 }
 
 //Function to create a new cookie if it does not exists already
@@ -258,6 +431,17 @@ function getCookie(email){
   return "";
 }
 
+function updateCookie(email, name, surname, username, password, dob, avatar){
+  const d = new Date();
+  d.setTime(d.getTime() + (30*24*60*60*1000));
+  let expires = "expires=" + d.toGMTString();
+  let cname = name + "," + surname +
+  "," + username + "," + password + "," +
+  dob + "," + avatar;
+  document.cookie = email + "=" + cname +
+  ";" + expires + ";path=/";
+  return cname;
+}
 //Function to check if a cookie exists when logging in and check if password is the correct one
 function checkCookie(email, password){
   let user = getCookie(email);

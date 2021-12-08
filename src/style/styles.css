@@ -355,6 +355,7 @@ input[type=checkbox]:checked ~ div {
   right: 2.5%;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .like-circle-active{
@@ -367,6 +368,7 @@ input[type=checkbox]:checked ~ div {
   right: 2.5%;
   display: none;
   align-items: center;
+  cursor: pointer;
 }
 
 /*################### END EXPERIENCES ###################*/

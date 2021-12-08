@@ -151,6 +151,11 @@
   cursor: pointer;
 }
 
+#button_collections button{
+  background-color: #4C61FF;
+  color: #FFFFFF;
+}
+
 .button_text button:hover{
   background-color: #4C61FF;
   color: #FFFFFF;
@@ -159,25 +164,88 @@
 #collections_display{
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
-  margin: 20px auto;
+  width: 95%;
+  gap: 4%;
+  margin: 20px auto 40px auto;
 }
 
 .collection{
+  position: relative;
   width: 300px;
   height: 300px;
   border-radius: 15px;
   border: 1px solid #4C61FF;
+  background-color: #FFFFFF;
 }
 
 .collection img{
   width: 100%;
-  height: 100%;
+  height: 85%;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.collection h3{
+  width: 80%;
+  height: 10%;
+  margin: auto;
+  text-align: center;
+}
+
+.options{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F3F3F3;
+  border-radius: 0px 15px 0px 0px;
+}
+
+.options p{
+  width: 100%;
+  height: 50%;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.options p:hover{
+  background-color: #D2D2D2;
+}
+
+.options_exp{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #F3F3F3;
+  border-radius: 0px 15px 0px 0px;
+}
+
+.options_exp p{
+  width: 100%;
+  height: 33%;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.options_exp p:hover{
+  background-color: #D2D2D2;
 }
 
 #add_new_collection{
@@ -201,16 +269,15 @@
 }
 
 #experiences_display{
-  display: flex;
+  display: none;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  gap: 5%;
+  width: 95%;
   margin: 20px auto;
+  gap: 4%;
 }
 
 .experience{
+  position: relative;
   width: 300px;
   height: 300px;
   border-radius: 15px;
@@ -250,7 +317,126 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 400px;
 }
+
+#add_collection_container h3{
+  margin: 20px auto;
+}
+
+#add_coll_form{
+  width: 80%;
+  margin: 0px auto 40px auto;
+}
+
+#add_coll_image{
+  height: 80%;
+  background-color: #F0F0F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#add_coll_image img{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+#add_coll_title{
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+}
+
+#add_coll_title input[type="text"]{
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 10px;
+}
+
+#add_coll_title input[type="submit"]{
+  background-color: #4C61FF;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#add_coll_image label input{
+  display: none;
+}
+
+/*##### EDIT COLLECTION #####*/
+#edit_collection_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+}
+
+#edit_collection_container h3{
+  margin: 20px auto;
+}
+
+#edit_coll_form{
+  width: 80%;
+  margin: 0px auto 40px auto;
+}
+
+#edit_coll_image{
+  height: 80%;
+  background-color: #F0F0F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#edit_coll_image img{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+#edit_coll_title{
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px auto;
+}
+
+#edit_coll_title input[type="text"]{
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  border: none;
+  border-radius: 10px;
+}
+
+#edit_coll_title input[type="submit"]{
+  background-color: #4C61FF;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#edit_coll_image label input{
+  display: none;
+}
+
 
 @media screen and (max-width: 1050px) {
   #top_part{
@@ -283,4 +469,112 @@
   #change_profile{
     margin-top: 10px;
   }
+}
+
+/*##CHANGE PROFILE POPUP##*/
+#change_profile_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 1000px;
+  border-radius: 20px;
+}
+
+#avatar_change_form{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+#username_change_form{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.my_profile_info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_form{
+  margin-bottom: 2%;
+}
+
+.profile_form button{
+  border: 1px solid #000000;
+  width: 80%;
+  height: 15%;
+  padding: 10px 0px;
+  font-size: 15px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 15px;
+  margin: 2% 0;
+}
+
+.profile_form input{
+  margin: 0px auto 15px auto;
+  width: 80%;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #F4F4F4;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.hidden_form button{
+  border: 1px solid #000000;
+  width: 80%;
+  height: 15%;
+  padding: 10px 0px;
+  font-size: 15px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 15px;
+  margin: 2% 0;
+}
+
+.hidden_form:hover{
+  background-color: #9ce6ff;
+}
+
+.display_form{
+  border: 1px solid #000000;
+  width: 80%;
+  height: 15%;
+  padding: 10px 0px;
+  font-size: 15px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 15px;
+  margin: 2% 0;
+}
+
+.display_form:hover{
+  background-color: #9ce6ff;
+}
+
+.profile_form button:hover{
+  background-color: #9ce6ff;
+}
+
+#instagram_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+#interests_form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
