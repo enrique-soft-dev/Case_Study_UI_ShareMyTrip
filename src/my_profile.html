@@ -41,96 +41,114 @@
 			<div id="user_logged">
 				<img id="user_img" src="./images/luisito_profile.jpg" alt="profile picture">
 				<p id="user_username">@User1</p>
-				<ion-icon id="messages_icon" name="paper-plane-outline"></ion-icon>
 			</div>
 		</div>
 	</header>
-  <div class="profile-container">
-    <div class="image_profile">
-			<div class="square_image">
-					<img src="./images/luisito_profile.jpg" alt="profile_pic">
+
+	<div id="sidebar_user">
+		<button class="close" id="sidebar_close">&times;</button>
+		<div id="logged_user">
+			<img id="img_user" src="./images/luisito_profile.jpg" alt="profile picture">
+			<p id="username_user">@User1</p>
+		</div>
+		<div id="user-menu">
+			<div class="menu-button" id="my-profile">
+				<p>My profile</p>
 			</div>
-			<button>Change your profile picture</button>
-    </div>
-    <div class="text_container">
-      	<div class="left_profile">
-					<div class="info_profile">
-						<h3>Your name:</h3>
+			<div class="menu-button" id="my-messages">
+				<p>My messages</p>
+			</div>
+			<div class="menu-button" id="log-out">
+				<p>Log out</p>
+			</div>
+		</div>
+	</div>
+
+	<main>
+		<div id="breadcrum">
+	    <p> Home > My profile </p>
+	  </div>
+
+	  <div id="profile_container">
+			<div id="top_part">
+	    	<div id="img_profile">
+					<img id="profile" src="./images/avatars/luisito_profile.jpg" alt="profile image">
+				</div>
+				<div id="profile_info">
+					<div id="basic_info">
+						<h3>Basic information</h3>
+						<h4>Name:</h4>
 						<p>Luis Márquez Ramírez</p>
-					</div>
-					<div class="info_profile">
-						<h3>Username:</h3>
-						<p>Luisito Comunica</p>
-					</div>
-					<div class="info_profile">
-						<h3>Age:</h3>
-						<p>30 Years Old</p>
-					</div>
-					<div class="info_profile">
-						<h3>Birthday:</h3>
-						<p>20 March</p>
-					</div>
-      	</div>
-				<div class="right_profile">
-					<div class="info_profile">
-						<h3>Email:</h3>
+						<h4>Username:</h4>
+						<p>luisito_comunica</p>
+						<h4>Birthdate:</h4>
+						<p>20 March 1991</p>
+						<h4>Name:</h4>
 						<p>luisito_comunica@gmail.com</p>
 					</div>
-					<div class="info_profile">
-						<h3>Instagram Account:</h3>
-						<p>@luisito_comunica</p>
-					</div>
-					<div class="info_profile">
-						<h3>Interests:</h3>
-						<p>Trying new experiences around the world and show it my followers. I love beautiful landscapes and good food.</p>
+					<div id="additional_info">
+						<h3>Additional information</h3>
+						<h4>Other accounts:</h4>
+						<p>Instagram: @luisitocomunica</p>
+						<p>Twitter:</p>
+						<p>facebook:</p>
+						<h4>Interests:</h4>
+						<p>Trying new experiences around the world and show it to my followers.
+						I love beautiful landscapes and good food.</p>
 					</div>
 				</div>
-    </div>
-  </div>
+			</div>
+			<div id="bottom_part">
+				<p id="change_profile">Change profile information</p>
+			</div>
+	  </div>
+		<!--Name + surname, username, birthdate, email, other accounts, interests-->
 
-	<div class="popup" id="add_collection_popup">
-		<div class="popup-window" id="add_collection">
-			<div id="collection_container">
-				<button class="close">&times;</button>
-				<h4>Add new collection</h4>
-				<label>
-					<input type="file">
-					<img src="./images/no-image.png" alt="default">
-					<p>Add your cover</p>
-				</label>
-				<div class="collection_form">
-					<input type="text" placeholder="Enter your collection name">
-					<button>Save</button>
+		<div id="experiences_part">
+			<div id="button_container">
+				<div id="button_collections" class="button_text">
+					<button>My collections</button>
+				</div>
+				<div id="button_experiences" class="button_text">
+					<button>My experiences</button>
+				</div>
+			</div>
+
+			<div id="collections_display">
+				<div id="profile_collections">
+					<img src="./images/collection.png" alt="collection">
+					<img src="./images/experiences/marseille.jpg" alt="marseille">
+					<img src="./images/experiences/iceland.jpg" alt="iceland">
+				</div>
+			</div>
+			<div id="experiences_display">
+				<div id="profile-experiences">
+					<img src="./images/hostaria.jpg" alt="hostaria">
+					<img src="./images/experiences/sydney.jpg" alt="sydney">
+					<img src="./images/experiences/ecuador.jpg" alt="ecuador">
 				</div>
 			</div>
 		</div>
+	</main>
 
-	</div>
-
-
-	<div class="button_container">
-		<div id="button_collections" class="button_text">
-			<button>My collections</button>
+	<div class="popup" id="add_collection_popup">
+		<div class="popup-window">
+			<button class="close" id="add_collection_close">&times;</button>
+			<div id="add_collection_container">
+				<h3>ADD A NEW COLLECTION</h3>
+				<form id="add_coll_form">
+					<div id="add_coll_image">
+						<label>
+							<input type="file" name="add-coll-img" required>
+							<img src="./images/no-image.png" alt="default">
+						</label>
+					</div>
+					<div id="add_coll_title">
+						<input id="add_coll_text" type="text" placeholder="Title of collection" required>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div id="button_experiences" class="button_text">
-			<button>My experiences</button>
-		</div>
-	</div>
-
-	<div id="collections_display">
-		<div id="profile_collections">
-			<img src="./images/collection.png" alt="collection">
-			<img src="./images/experiences/marseille.jpg" alt="marseille">
-			<img src="./images/experiences/iceland.jpg" alt="iceland">
-		</div>
-	</div>
-	<div id="experiences_display">
-		<div id="profile-experiences">
-			<img src="./images/hostaria.jpg" alt="hostaria">
-			<img src="./images/experiences/sydney.jpg" alt="sydney">
-			<img src="./images/experiences/ecuador.jpg" alt="ecuador">
-		</div>
-	</div>
 
 	<!-- Pop up for adding an experience -->
 	<div class="popup" id="add_experience_popup">

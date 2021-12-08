@@ -40,10 +40,29 @@
 			<div id="user_logged">
 				<img id="user_img" src="./images/luisito_profile.jpg" alt="profile picture">
 				<p id="user_username">@User1</p>
-				<ion-icon id="messages_icon" name="paper-plane-outline"></ion-icon>
 			</div>
 		</div>
 	</header>
+
+	<div id="sidebar_user">
+		<button class="close" id="sidebar_close">&times;</button>
+		<div id="logged_user">
+			<img id="img_user" src="./images/luisito_profile.jpg" alt="profile picture">
+			<p id="username_user">@User1</p>
+		</div>
+		<div id="user-menu">
+			<div class="menu-button" id="my-profile">
+				<p>My profile</p>
+			</div>
+			<div class="menu-button" id="my-messages">
+				<p>My messages</p>
+			</div>
+			<div class="menu-button" id="log-out">
+				<p>Log out</p>
+			</div>
+		</div>
+	</div>
+
 
 	<main>
 		<!-- ###### Section for the search bar ######-->
@@ -176,46 +195,46 @@
 	    <div id="extra_filters">
 	      <div id="budget">
 	        <h4>Budget</h4>
-					<input type="range" min="1" max="100" value="50">
+					<div id="budget_range">
+						<p>0$<p>
+						<input type="range" min="0" max="1500" value="750">
+						<p>1500$</p>
+					</div>
 	      </div>
-	      <div id="order_by">
-	        <h4>Order by</h4>
-	        <input type="checkbox" id="order1" name="order1" value="Likes">
-					<label for="order1">Likes</label><br>
-	        <input type="checkbox" id="order2" name="order2" value="Date">
-					<label for="order2">Date</label><br>
-	        <input type="checkbox" id="order3" name="order3" value="Price">
-					<label for="order3">Price</label><br>
-	      </div>
-	      <div id="features">
-	        <h4>Features</h4>
-	        <input type="checkbox" id="feature1" name="feature1" value="Family">
-					<label for="feature1">Family friendly</label><br>
-	        <input type="checkbox" id="feature2" name="feature2" value="Groups">
-					<label for="feature2">Good for groups</label><br>
-	        <input type="checkbox" id="feature3" name="feature3" value="Booking">
-					<label for="feature3">Needs booking</label><br>
-	        <input type="checkbox" id="feature4" name="feature4" value="Urban">
-					<label for="feature4">Urban</label><br>
-	        <input type="checkbox" id="feature5" name="feature5" value="Nature">
-					<label for="feature5">In nature</label><br>
-	      </div>
+				<div id="bottom_filters">
+		      <div id="order_by">
+		        <h4>Order by</h4>
+						<select name="order" id="select_order">
+							<option value="Likes">Likes</option>
+							<option value="Date">Date</option>
+							<option value="Price">Price</option>
+						</select>
+		      </div>
+		      <div id="features">
+		        <h4>Features</h4>
+						<select name="order" id="select_feature">
+							<option value="Family">Family Friendly</option>
+							<option value="Groups"> Good for groups</option>
+							<option value="Booking">Needs booking</option>
+							<option value="Urban">Urban</option>
+							<option value="Nature">In nature</option>
+						</select>
+		      </div>
+				</div>
 	    </div>
 	    <div id="results_right">
 	      <div id="head_content">
 	        <h3>Showing results for "Burger"</h3>
-	        <div id="asc_desc">
-	          <button>Asc.</button>
-	          <button>Desc.</button>
-	        </div>
 	      </div>
 	      <div id="results_list">
 	        <div class="result_experience" id="burger_result">
 						<img class="result_img" src="./images/b&b3.png" alt="burger&beyond">
 						<div class="result_info">
-	          	<p>Burger & Beyond</p>
-							<p>Liam Mackenzie</p>
-							<p>15€ - 25€ pp</p>
+							<div class="text_info">
+		          	<p class="title_info">Burger & Beyond</p>
+								<p>Liam Mackenzie</p>
+								<p>15€ - 25€ pp</p>
+							</div>
 							<div class="tags_row">
 								<p class="tag principal">#Food</p>
 								<p class="tag">#Urban</p>
@@ -233,9 +252,11 @@
 					<div class="result_experience" id="exp1_result">
 						<img class="result_img" src="./images/experiences/japan.jpg" alt="exp1_img">
 						<div class="result_info">
-	          	<p>Door of Miyajima</p>
-							<p>Ozaki Yukiko</p>
-							<p>5$ pp</p>
+							<div class="text_info">
+		          	<p class="title_info">Door of Miyajima</p>
+								<p>Ozaki Yukiko</p>
+								<p>5$ pp</p>
+							</div>
 							<div class="tags_row">
 								<p class="tag principal">#Landmark</p>
 								<p class="tag">#In Nature</p>
@@ -249,9 +270,11 @@
 					<div class="result_experience" id="exp2_result">
 						<img class="result_img" src="./images/experiences/iceland.jpg" alt="exp2_img">
 						<div class="result_info">
-		 					<p>Grundarfjörður</p>
-		 					<p>Evert Elliðason</p>
-		 					<p>Free</p>
+							<div class="text_info">
+			 					<p class="title_info">Grundarfjörður</p>
+			 					<p>Evert Elliðason</p>
+			 					<p>Free</p>
+							</div>
 		 					<div class="tags_row">
 								<p class="tag principal">#Landmark</p>
 								<p class="tag principal">#Activity</p>
@@ -267,9 +290,11 @@
 					<div class="result_experience" id="exp3_result">
 						<img class="result_img" src="./images/experiences/sydney.jpg" alt="exp3_img">
 						<div class="result_info">
-	          	<p>Sydney Opera</p>
-							<p>Ethan Hayes</p>
-							<p>45+$</p>
+							<div class="text_info">
+		          	<p class="title_info">Sydney Opera</p>
+								<p>Ethan Hayes</p>
+								<p>45+$</p>
+							</div>
 							<div class="tags_row">
 								<p class="tag principal">#Activity</p>
 								<p class="tag">#Urban</p>
@@ -285,9 +310,11 @@
 					<div class="result_experience" id="exp4_result">
 						<img class="result_img" src="./images/experiences/ecuador.jpg" alt="exp4_img">
 						<div class="result_info">
-	          	<p>Baños de Agua Santa</p>
-							<p>Juanita Agramonte</p>
-							<p>Free</p>
+							<div class="text_info">
+		          	<p class="title_info">Baños de Agua Santa</p>
+								<p>Juanita Agramonte</p>
+								<p>Free</p>
+							</div>
 							<div class="tags_row">
 								<p class="tag principal">#Landmark</p>
 								<p class="tag">#In Nature</p>
@@ -302,9 +329,11 @@
 					<div class="result_experience" id="exp5_result">
 						<img class="result_img" src="./images/experiences/marseille.jpg" alt="exp5_img">
 						<div class="result_info">
-	          	<p>Le Vieux Port</p>
-							<p>Claudio Giampa</p>
-							<p>20-70$ pp</p>
+							<div class="text_info">
+		          	<p class="title_info">Le Vieux Port</p>
+								<p>Claudio Giampa</p>
+								<p>20-70$ pp</p>
+							</div>
 							<div class="tags_row">
 								<p class="tag principal">#Landmark</p>
 								<p class="tag">#Urban</p>
@@ -319,9 +348,11 @@
 					<div class="result_experience" id="exp6_result">
 						<img class="result_img" src="./images/experiences/hostaria.jpg" alt="exp6_img">
 						<div class="result_info">
-	          	<p>Hostaria al gladiatore</p>
-							<p>Pierre Ouef</p>
-							<p>20-40$</p>
+							<div class="text_info">
+		          	<p class="title_info">Hostaria al gladiatore</p>
+								<p>Pierre Ouef</p>
+								<p>20-40$</p>
+							</div>
 							<div class="tags_row">
 								<p class="tag principal">#Food</p>
 								<p class="tag">#Family Friendly</p>
@@ -418,19 +449,23 @@
 				<div class="popup_info">
 					<img class="popup_img" src="./images/experiences/japan.jpg" alt="japan_image">
 					<div class="popup_details">
-						<p class="details_title">Door of Miyajima</p>
-						<p>Location: Miyajima, Japan</p>
-						<p>By Ozaki Yukiko</p>
-						<p>Budget: 5$</p>
-						<div class="tags_row">
-							<p class="tag principal">#Landmark</p>
-							<p class="tag">#In Nature</p>
+						<div class="details_info">
+							<p class="details_title">Door of Miyajima</p>
+							<p>Location: Miyajima, Japan</p>
+							<p>By Ozaki Yukiko</p>
+							<p>Budget: 5$</p>
 						</div>
-						<p>200k likes</p>
-						<div class="interaction_buttons">
-							<ion-icon name="share-social"></ion-icon>
-							<ion-icon name="heart"></ion-icon>
-							<ion-icon name="chatbubble"></ion-icon>
+						<div class="details_rest">
+							<div class="tags_row">
+								<p class="tag principal">#Landmark</p>
+								<p class="tag">#In Nature</p>
+							</div>
+							<p>200k likes</p>
+							<div class="interaction_buttons">
+								<ion-icon name="share-social"></ion-icon>
+								<ion-icon name="heart"></ion-icon>
+								<ion-icon name="chatbubble"></ion-icon>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -450,21 +485,25 @@
 				<div class="popup_info">
 					<img class="popup_img" src="./images/experiences/iceland.jpg" alt="iceland_image">
 					<div class="popup_details">
-						<p class="details_title">Grundarfjörður</p>
-						<p>Location: Grundarfjörður, Iceland</p>
-						<p>By Evert Elliðason</p>
-						<p>Budget: Free</p>
-						<div class="tags_row">
-							<p class="tag principal">#Landmark</p>
-							<p class="tag principal">#Activity</p>
-							<p class="tag">#In Nature</p>
-							<p class="tag">#Good for groups</p>
+						<div class="details_info">
+							<p class="details_title">Grundarfjörður</p>
+							<p>Location: Grundarfjörður, Iceland</p>
+							<p>By Evert Elliðason</p>
+							<p>Budget: Free</p>
 						</div>
-						<p>78k likes</p>
-						<div class="interaction_buttons">
-							<ion-icon name="share-social"></ion-icon>
-							<ion-icon name="heart"></ion-icon>
-							<ion-icon name="chatbubble"></ion-icon>
+						<div class="details_rest">
+							<div class="tags_row">
+								<p class="tag principal">#Landmark</p>
+								<p class="tag principal">#Activity</p>
+								<p class="tag">#In Nature</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+							<p>78k likes</p>
+							<div class="interaction_buttons">
+								<ion-icon name="share-social"></ion-icon>
+								<ion-icon name="heart"></ion-icon>
+								<ion-icon name="chatbubble"></ion-icon>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -485,21 +524,25 @@
 				<div class="popup_info">
 					<img class="popup_img" src="./images/experiences/sydney.jpg" alt="sidney_image">
 					<div class="popup_details">
-						<p class="details_title">Sydney Opera</p>
-						<p>Location: Sydney, Australia</p>
-						<p>By Ethan Hayes</p>
-						<p>Budget: 45+$</p>
-						<div class="tags_row">
-							<p class="tag principal">#Activity</p>
-							<p class="tag">#Urban</p>
-							<p class="tag">#Good for groups</p>
-							<p class="tag">#Needs booking</p>
+						<div class="details_info">
+							<p class="details_title">Sydney Opera</p>
+							<p>Location: Sydney, Australia</p>
+							<p>By Ethan Hayes</p>
+							<p>Budget: 45+$</p>
 						</div>
-						<p>23k likes</p>
-						<div class="interaction_buttons">
-							<ion-icon name="share-social"></ion-icon>
-							<ion-icon name="heart"></ion-icon>
-							<ion-icon name="chatbubble"></ion-icon>
+						<div class="details_rest">
+							<div class="tags_row">
+								<p class="tag principal">#Activity</p>
+								<p class="tag">#Urban</p>
+								<p class="tag">#Good for groups</p>
+								<p class="tag">#Needs booking</p>
+							</div>
+							<p>23k likes</p>
+							<div class="interaction_buttons">
+								<ion-icon name="share-social"></ion-icon>
+								<ion-icon name="heart"></ion-icon>
+								<ion-icon name="chatbubble"></ion-icon>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -525,20 +568,24 @@
 				<div class="popup_info">
 					<img class="popup_img" src="./images/experiences/ecuador.jpg" alt="ecuador_image">
 					<div class="popup_details">
-						<p class="details_title">Baños de Agua Santa</p>
-						<p>Location: Baños, Ecuador</p>
-						<p>By Juanita Agramonte</p>
-						<p>Budget: Free</p>
-						<div class="tags_row">
-							<p class="tag principal">#Landmark</p>
-							<p class="tag">#In Nature</p>
-							<p class="tag">#Good for groups</p>
+						<div class="details_info">
+							<p class="details_title">Baños de Agua Santa</p>
+							<p>Location: Baños, Ecuador</p>
+							<p>By Juanita Agramonte</p>
+							<p>Budget: Free</p>
 						</div>
-						<p>55k likes</p>
-						<div class="interaction_buttons">
-							<ion-icon name="share-social"></ion-icon>
-							<ion-icon name="heart"></ion-icon>
-							<ion-icon name="chatbubble"></ion-icon>
+						<div class="details_rest">
+							<div class="tags_row">
+								<p class="tag principal">#Landmark</p>
+								<p class="tag">#In Nature</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+							<p>55k likes</p>
+							<div class="interaction_buttons">
+								<ion-icon name="share-social"></ion-icon>
+								<ion-icon name="heart"></ion-icon>
+								<ion-icon name="chatbubble"></ion-icon>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -560,20 +607,24 @@
 				<div class="popup_info">
 					<img class="popup_img" src="./images/experiences/marseille.jpg" alt="marseille_image">
 					<div class="popup_details">
-						<p class="details_title">Le Vieux Port</p>
-						<p>Location: Marseille, France</p>
-						<p>By Claudio Giampa</p>
-						<p>Budget: 20-70$</p>
-						<div class="tags_row">
-							<p class="tag principal">#Landmark</p>
-							<p class="tag">#Urban</p>
-							<p class="tag">#Good for groups</p>
+						<div class="details_info">
+							<p class="details_title">Le Vieux Port</p>
+							<p>Location: Marseille, France</p>
+							<p>By Claudio Giampa</p>
+							<p>Budget: 20-70$</p>
 						</div>
-						<p>11k likes</p>
-						<div class="interaction_buttons">
-							<ion-icon name="share-social"></ion-icon>
-							<ion-icon name="heart"></ion-icon>
-							<ion-icon name="chatbubble"></ion-icon>
+						<div class="details_rest">
+							<div class="tags_row">
+								<p class="tag principal">#Landmark</p>
+								<p class="tag">#Urban</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+							<p>11k likes</p>
+							<div class="interaction_buttons">
+								<ion-icon name="share-social"></ion-icon>
+								<ion-icon name="heart"></ion-icon>
+								<ion-icon name="chatbubble"></ion-icon>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -593,20 +644,24 @@
 				<div class="popup_info">
 					<img class="popup_img" src="./images/b&b.png" alt="burgers_image">
 					<div class="popup_details">
-						<p class="details_title">Burger & Beyond</p>
-						<p>Location: Shoreditch, London</p>
-						<p>By Liam Mackenzie</p>
-						<p>Budget: 15€ - 25€</p>
-						<div class="tags_row">
-							<p class="tag principal">#Food</p>
-							<p class="tag">#Urban</p>
-							<p class="tag">#Good for groups</p>
+						<div class="details_info">
+							<p class="details_title">Burger & Beyond</p>
+							<p>Location: Shoreditch, London</p>
+							<p>By Liam Mackenzie</p>
+							<p>Budget: 15€ - 25€</p>
 						</div>
-						<p>15k likes</p>
-						<div class="interaction_buttons">
-							<ion-icon name="share-social"></ion-icon>
-							<ion-icon name="heart"></ion-icon>
-							<ion-icon name="chatbubble"></ion-icon>
+						<div class="details_rest">
+							<div class="tags_row">
+								<p class="tag principal">#Food</p>
+								<p class="tag">#Urban</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+							<p>15k likes</p>
+							<div class="interaction_buttons">
+								<ion-icon name="share-social"></ion-icon>
+								<ion-icon name="heart"></ion-icon>
+								<ion-icon name="chatbubble"></ion-icon>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -635,20 +690,24 @@
 				<div class="popup_info">
 					<img class="popup_img" src="./images/experiences/hostaria.jpg" alt="hostaria_image">
 					<div class="popup_details">
-						<p class="details_title">Hostaria al gladiatore</p>
-						<p>Location: Rome, Italy</p>
-						<p>By Pierre Ouef</p>
-						<p>Budget: 20-40$</p>
-						<div class="tags_row">
-							<p class="tag principal">#Food</p>
-							<p class="tag">#Family Friendly</p>
-							<p class="tag">#Good for groups</p>
+						<div class="details_info">
+							<p class="details_title">Hostaria al gladiatore</p>
+							<p>Location: Rome, Italy</p>
+							<p>By Pierre Ouef</p>
+							<p>Budget: 20-40$</p>
 						</div>
-						<p>12k likes</p>
-						<div class="interaction_buttons">
-							<ion-icon name="share-social"></ion-icon>
-							<ion-icon name="heart"></ion-icon>
-							<ion-icon name="chatbubble"></ion-icon>
+						<div class="details_rest">
+							<div class="tags_row">
+								<p class="tag principal">#Food</p>
+								<p class="tag">#Family Friendly</p>
+								<p class="tag">#Good for groups</p>
+							</div>
+							<p>12k likes</p>
+							<div class="interaction_buttons">
+								<ion-icon name="share-social"></ion-icon>
+								<ion-icon name="heart"></ion-icon>
+								<ion-icon name="chatbubble"></ion-icon>
+							</div>
 						</div>
 					</div>
 				</div>

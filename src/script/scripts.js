@@ -118,10 +118,16 @@ $(document).ready(function(){
   $("#ranking").click(function(){
     changePage("ranking.html");
   })
-  $("#messages_icon").click(function(){
+  $("#user_logged").click(function(){
+    $("#sidebar_user").animate({width:'toggle'},350);
+  })
+  $("#sidebar_close").click(function(){
+    $("#sidebar_user").animate({width:'toggle'},350);
+  })
+  $("#my-messages").click(function(){
     changePage("messages.html");
   })
-  $("#user_img").click(function(){
+  $("#my-profile").click(function(){
     changePage("my_profile.html");
   })
   $("#search_button").click(function(e){
