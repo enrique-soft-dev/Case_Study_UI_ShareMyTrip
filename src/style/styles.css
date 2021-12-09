@@ -75,6 +75,10 @@ main{
   justify-content: center;
 }
 
+.active p{
+  text-decoration: underline;
+}
+
 .menu_option:hover{
   background-color: #4C61FF;
   color: #FFFFFF;
@@ -260,6 +264,7 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 3%;
 }
 
 .filter:hover{

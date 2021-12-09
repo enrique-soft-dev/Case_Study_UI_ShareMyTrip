@@ -172,6 +172,11 @@ $(document).ready(function(){
 
   $("#change_profile").click(function(){
     openPopUp("#change_profile_popup");
+    $("#text_username_change").attr("value", document.getElementById("profile_username").innerHTML)
+    $("#instagram_account").attr("value", document.getElementById("instagram_profile").innerHTML.split(" ")[1])
+    $("#facebook_account").attr("value", document.getElementById("twitter_profile").innerHTML.split(" ")[1])
+    $("#twitter_account").attr("value", document.getElementById("facebook_profile").innerHTML.split(" ")[1])
+    $("#interests_info").attr("value", document.getElementById("interests_profile").innerHTML)
   })
   $("#change_profile_close").click(function(){
     closePopUp("#change_profile_popup");
