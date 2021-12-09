@@ -65,6 +65,24 @@ $(document).ready(function(){
   $("#burger_close").click(function(){
     closePopUp("#burger_popup")
   })
+  $("#exp1_result").click(function(){
+    openPopUp("#exp1_popup");
+  })
+  $("#exp2_result").click(function(){
+    openPopUp("#exp2_popup");
+  })
+  $("#exp3_result").click(function(){
+    openPopUp("#exp3_popup");
+  })
+  $("#exp4_result").click(function(){
+    openPopUp("#exp4_popup");
+  })
+  $("#exp5_result").click(function(){
+    openPopUp("#exp5_popup");
+  })
+  $("#exp6_result").click(function(){
+    openPopUp("#exp6_popup");
+  })
   //Sign up form
   $("#signup-content").submit(function(e){
     e.preventDefault();
