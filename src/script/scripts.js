@@ -16,6 +16,10 @@ $(document).ready(function(){
     closePopUp("#login-popup")
     openPopUp("#signup-popup")
   })
+  $("#change-to-signin").click(function(){
+    openPopUp("#login-popup")
+    closePopUp("#signup-popup")
+  })
   $("#signup-close").click(function(){
     closePopUp("#signup-popup")
   })
