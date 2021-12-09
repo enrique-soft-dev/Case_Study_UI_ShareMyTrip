@@ -187,6 +187,7 @@ $(document).ready(function(){
     e.preventDefault()
     window.scroll({top: 350, left: 0, behavior: 'smooth'});
     var value = $("#search_text").val().toLowerCase();
+    var showingDivs = 0;
     //We filter by the introduced text when the button is clicked
     $("#results_list .result_experience").filter(function(){
       if(value != ""){
@@ -200,7 +201,14 @@ $(document).ready(function(){
         $(this).toggle(((document.getElementById("landmarks_checkbox").checked && $(this).text().indexOf("#Landmark") > -1) || (document.getElementById("food_checkbox").checked && $(this).text().indexOf("#Food") > -1) || (document.getElementById("activities_checkbox").checked && $(this).text().indexOf("#Activity") > -1)));
         document.getElementById("results_text").innerHTML = 'Showing results';
       }
+      if ($(this).css("display") != "none"){
+        showingDivs += 1;
+      }
     })
+
+    if (showingDivs == 0){
+      document.getElementById("results_text").innerHTML = "No results found..."
+    }
   })
   $("#add_new_collection").click(function(){
     openPopUp("#add_collection_popup");
