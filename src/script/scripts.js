@@ -366,6 +366,10 @@ $(document).ready(function(){
     $("#edit_img_exp").attr("src", experience)
   })
 
+  $("#exp_close").click(function(){
+    closePopUp("#exp_popup")
+  })
+
 });
 
 function like(not_liked, liked){
@@ -505,11 +509,11 @@ function deleteCollection(id, flag = '0'){
 function addExperience(image, title, collab, desc, topics, tags){
   let value = title + "¡" + image + "¡" + collab + "¡" + desc + "¡" + topics + "¡" + tags
   localStorage.setItem("exp" + numOfExps, value)
-  let newhtml = '<div class="experience" id="exp' + numOfExps + '"> <img id="image_exp' + numOfExps + '" src="' + image + '" alt="experience"> <h4 id="title_exp' + numOfExps + '">' + title + '</h4>'
+  let newhtml = '<div class="experience" id="exp' + numOfExps + '"> <img id="image_exp' + numOfExps + '" src="' + image + '" alt="experience"> <h4 id="title_exp' + numOfExps + '" onclick=openExperience("exp' + numOfExps + '")>' + title + '</h4>'
   newhtml += "<div class='like-circle' onclick=openOptions('#exp" + numOfExps + "_opt')> <ion-icon name='ellipsis-vertical-outline'></ion-icon> </div>"
   newhtml += "<div class='options_exp' id='exp" + numOfExps + "_opt'> <button class='close' onclick=closeOptions('#exp" + numOfExps + "_opt')>&times;</button>"
   newhtml += "<p onclick=editExperience('" + numOfExps + "')>Edit experience</p> <p onclick=deleteExperience('" + numOfExps + "')>Delete experience</p>"
-  newhtml += "<p onclick=addToCollection('" + numOfExps + "')>Add to experience</p> </div> </div>"
+  newhtml += "<p onclick=addToCollection('" + numOfExps + "')>Add to collection</p> </div> </div>"
 
   $("#experiences_display").append(newhtml);
   numOfExps += 1;
@@ -564,6 +568,42 @@ function deleteExperience(id, flag = '0'){
     } else {
       closeOptions("#exp" + id + "_opt");
     }
+  }
+}
+
+function openExperience(id){
+  let experience = localStorage.getItem(id)
+  experience = experience.split("¡");
+  openPopUp("#exp_popup");
+  console.log(experience[1]);
+  $("#generic_img").attr("src" , experience[1])
+  $("#generic_title").text(experience[0])
+  $("#generic_collaborators").text(experience[2].split("¿").join(" "))
+  $("#generic_desc").text(experience[3])
+  $("#generic_author").text(document.getElementById("profile_name").innerHTML)
+  if (experience[4] == "false"){
+    $("#generic_land").css("display", "none");
+  }
+  if (experience[5] == "false"){
+    $("#generic_food").css("display", "none");
+  }
+  if (experience[6] == "false"){
+    $("#generic_act").css("display", "none");
+  }
+  if (experience[7] == "false"){
+    $("#generic_ff").css("display", "none");
+  }
+  if (experience[8] == "false"){
+    $("#generic_gr").css("display", "none");
+  }
+  if (experience[9] == "false"){
+    $("#generic_bk").css("display", "none");
+  }
+  if (experience[10] == "false"){
+    $("#generic_ur").css("display", "none");
+  }
+  if (experience[11] == "false"){
+    $("#generic_in").css("display", "none");
   }
 }
 
